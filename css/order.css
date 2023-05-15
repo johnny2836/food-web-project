@@ -1,0 +1,337 @@
+.container {
+    width: 520px;
+    padding-top: 30px;
+    padding-left: 384px;
+    padding-right: 384px;
+    padding-bottom: 30px;
+    border-left: 2px solid #e4e4e4;
+    border-right: 2px solid #e4e4e4;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 新訂單、歷史紀錄 按鈕 */
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+h5 {
+    width: 116px;
+    height: 44px;
+    line-height: 44px;
+    border: 2px solid #bebebe;
+    margin: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#new-btn {
+    border-radius: 23px 0 0 23px;
+}
+
+#history-btn {
+    border-radius: 0 23px 23px 0;
+}
+
+.active {
+    border: 2px solid #b8c764;
+}
+
+/* 外框 */
+.box {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 訂單資訊 */
+.card {
+    text-align: left;
+    padding: 17px 30px 17px 18px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+/* 訂單資訊 品項圖片 */
+.pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    margin-right: 20px;
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+
+/* 訂單資訊 文字 */
+.info p {
+    width: 234px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding-left: 36px;
+}
+
+.info p:first-child {
+    margin-top: 0;
+}
+
+.info p:last-child {
+    margin-bottom: 0;
+}
+
+/* 訂單資訊-詳細  */
+.content {
+    width: 440px;
+    padding: 24px 30px 0;
+    margin: 0 auto;
+}
+
+.box li {
+    text-align: left;
+    padding-bottom: 14px;
+}
+
+.box li:last-child {
+    padding-bottom: 0;
+}
+
+/* 訂單資訊-詳細 標題 */
+.box li span:first-child {
+    width: 56px;
+    vertical-align: top;
+    display: inline-block;
+}
+
+/* 訂單資訊-詳細 內容 */
+.box li span:last-child {
+    width: 384px;
+    display: inline-block;
+}
+
+/* 大按鈕外框 */
+.btn-l {
+    color: #fff;
+    width: 135px;
+    height: 44px;
+    background-color: #ef8119;
+    border: 2px solid #ef8119;
+    border-radius: 32px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+/* 白底橘框按鈕 */
+.btn-l-left{
+    width: 135px;
+    height: 44px;
+    background-color: #fff;
+    border: 2px solid #ef8119;
+    border-radius: 32px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.btn-l:hover{
+    background-color: #F1942E;
+    border: 2px solid #F1942E;
+}
+.btn-l-left:hover{
+    opacity: 0.7;
+}
+/* 小按鈕 */
+.btn-s {
+    width: 73px;
+    height: 36px;
+    background-color: #ef8119;
+    border: 2px solid #ef8119;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+/* 白底橘框小按鈕 */
+.btn-s-left {
+    width: 73px;
+    height: 36px;
+    background-color: #ffffff;
+    border: 2px solid #ef8119;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.btn-s:hover{
+    background-color: #F1942E;
+    border: 2px solid #F1942E;
+}
+.btn-s-left:hover{
+    opacity: 0.7;
+}
+/* 訂單 -------------------------------------------------------------------------- */
+.order {
+    margin: 42px auto 30px;
+
+}
+
+.order .pic {
+    background-image: url("../images/img/ijysheng-cranberry-cheese-bread.jpeg");
+}
+
+.order .info p:first-child {
+    background: url("../images/icon/icon-list.svg") no-repeat;
+}
+
+.order .info p:nth-child(2) {
+    background: url("../images/icon/icon-shop.svg") no-repeat;
+}
+
+.order .info p:last-child {
+    background: url("../images/icon/icon-time.svg") no-repeat;
+}
+
+/* 訂單編號 標題 */
+h4 {
+    margin: 24px 0 10px;
+}
+
+/* 訂單編號 號碼 */
+.h2.num {
+    padding-bottom: 20px;
+    margin: 10px auto 25px;
+    border-bottom: 2px solid #e4e4e4;
+}
+
+/* 店家資訊 按鈕 */
+.vendor {
+    margin-right: 20px;
+}
+
+/* 歷史紀錄 ----------------------------------------------------------------------- */
+.year {
+    text-align: left;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+.history {
+    margin: 20px auto 30px;
+    position: relative;
+}
+
+/* 展開 按鈕 */
+.arrow {
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/icon/arrowdown.svg");
+    position: absolute;
+    top: 47px;
+    right: 30px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.arrow:hover{
+    background-image: url("../images/icon/arrowdown\(hover\).svg");
+}
+
+.expand {
+    background-image: url("../images/icon/arrowup.svg");
+}
+.expand:hover{
+    background-image: url("../images/icon/arrowup\(hover\).svg");
+}
+
+.history .info p:first-child {
+    background: url("../images/icon/icon-shop.svg") no-repeat;
+}
+
+.history .info p:nth-child(2) {
+    background: url("../images/icon/icon-calendar.svg") no-repeat;
+}
+
+/* 評分 */
+.star,
+.starr {
+    border-top: 2px solid #e4e4e4;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.star img,
+.starr img {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+}
+
+/* 評價輸入框 */
+textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+textarea::placeholder {
+    color: #bebebe;
+}
+
+/* 取消 按鈕 */
+.clear {
+    margin-right: 20px;
+}
+
+.commet {
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+/* 取消提示 -------------------------------------------------------------------------- */
+#cancel-box {
+    width: 430px;
+    height: 170px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px 20px 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 13;
+    display: none;
+}
+
+.esc {
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+    border: none;
+    margin: 0;
+    text-align: right;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.tip {
+    margin: 20px 0 28px;
+}
+
+.no,
+.yes {
+    margin: 0 auto;
+}
+
+.no {
+    margin-right: 20px;
+}

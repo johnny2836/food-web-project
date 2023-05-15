@@ -1,0 +1,483 @@
+/*-- 頁首區 --*/
+header {
+    color: #f4d775;
+    background-color: #ef8119;
+}
+
+a {
+    color: #f4d775;
+}
+
+.drp-dwn li:hover a {
+    color: #fff;
+}
+
+.drp-dwn li li:hover a {
+    color: #fff;
+}
+
+#nav-header li a:after {
+    background-color: #f4d775;
+}
+
+/*-- 內容區 --*/
+
+/*引導*/
+.entry {
+    height: 814px;
+    padding-top: 100px;
+    background: url("../images/other/bg-header.jpg") center 30%;
+    background-color: rgba(0, 0, 0, .3);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+
+/* 召喚超人 */
+#slogan {
+    width: 495px;
+    height: 80px;
+    margin-bottom: 70px;
+}
+
+/* 動畫 */
+.bounce-in {
+    animation: bounce-in 2s ease;
+}
+
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 地址 */
+#location {
+    position: relative;
+    display: inline-block;
+}
+
+#icon-crosshair {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 14px;
+    right: 24px;
+    cursor: pointer;
+}
+
+#input-address {
+    width: 660px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    box-sizing: border-box;
+    text-indent: 58px;
+    margin-bottom: 42px;
+    background: url("../images/icon/iconmonstr-location-l.svg") no-repeat 24px 11px, rgba(255, 255, 255, 0.8);
+}
+
+/* 介紹文 */
+#lead {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 500;
+    letter-spacing: 0.03rem;
+    margin-bottom: 60px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 卡片列 */
+.vendor-card-list {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 遮色片 */
+.mask1,
+.mask2 {
+    width: 166px;
+    height: 246px;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.mask1 {
+    background: linear-gradient(90deg, rgba(66, 41, 33, 0.6) 0%, rgba(0, 0, 0, 0) 71.65%);
+    left: 0;
+}
+
+.mask2 {
+
+    background: linear-gradient(270deg, rgba(66, 41, 33, 0.6) 0%, rgba(0, 0, 0, 0) 71.65%);
+    right: 0;
+}
+
+/* 卡片 */
+.vendor-card {
+    width: 320px;
+    height: 206px;
+    padding: 20px 10px;
+    margin-right: 32px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(2.5px);
+}
+
+/* 動畫 */
+.slideLeft {
+    animation: slideLeft 20s linear infinite 0.5s;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-2112px);
+    }
+}
+
+/* 卡片-圖片 */
+.vendor-card div {
+    width: 300px;
+    height: 162px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+.vendor-card-list .vendor-card:nth-child(1) div,
+.vendor-card-list .vendor-card:nth-child(7) div {
+    background-image: url("../images/img/hoganbakery.jpg");
+}
+
+.vendor-card-list .vendor-card:nth-child(2) div,
+.vendor-card-list .vendor-card:nth-child(8) div {
+    background-image: url("../images/img/wendel_s_german_bakery_Bistro.jpg");
+}
+
+.vendor-card-list .vendor-card:nth-child(3) div,
+.vendor-card-list .vendor-card:nth-child(9) div {
+    background-image: url("../images/img/Sato_Seinikuten_Shilin.jpg");
+}
+
+.vendor-card-list .vendor-card:nth-child(4) div,
+.vendor-card-list .vendor-card:nth-child(10) div {
+    background-image: url("../images/img/Toko_indo_feifei.jpg");
+}
+
+.vendor-card-list .vendor-card:nth-child(5) div,
+.vendor-card-list .vendor-card:nth-child(11) div {
+    background-image: url("../images/img/shinemood.jpg");
+}
+
+.vendor-card-list .vendor-card:nth-child(6) div,
+.vendor-card-list .vendor-card:nth-child(12) div {
+    background-image: url("../images/img/sunflower.jpeg");
+}
+
+/* 卡片-店名 */
+.vendor-card p {
+    margin: 0;
+}
+
+/* 了解更多 */
+#line {
+    width: 3px;
+    height: 100px;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+}
+
+/* 動畫 */
+.easeInOut {
+    animation: easeInOut 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes easeInOut {
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/*關於我們*/
+#about {
+    padding: 75px 0;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-box {
+    margin-bottom: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .about-box:nth-child(4){
+    margin-bottom: 90px;
+}
+
+.about-pic {
+    width: 800px;
+    height: 518px;
+}
+
+/* 區塊一 */
+.about-box1 {
+    width: 720px;
+    padding-left: 80px;
+}
+
+.about-box1 h1 {
+    margin-bottom: 33px;
+}
+
+.about-box1 p {
+    height: 130px;
+    text-align: justify;
+    background-repeat: no-repeat;
+    padding-left: 160px;
+    margin: 0 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about-box1-c {
+    width: 656px;
+}
+
+.about-box1 p:nth-child(1) {
+    background: url("../images/icon/banana.svg") no-repeat 0 center;
+}
+
+.about-box1 p:nth-child(2) {
+    background: url("../images/icon/food.svg") no-repeat 16.5px center;
+}
+
+.about-box1 p:nth-child(3) {
+    background: url("../images/icon/garbage.svg") no-repeat 16.5px center;
+}
+
+.about-box1 p:nth-child(4) {
+    background: url("../images/icon/hungry.svg") no-repeat 16.5px center;
+}
+
+/* 區塊二 */
+.about-box2 {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-box2 h1 {
+    margin-bottom: 54px;
+}
+
+.about-box2-c {
+    display: flex;
+    position: relative;
+}
+
+.about-box2 p:nth-child(2) {
+    color: #ef8119;
+}
+
+.about-box2 #customer,
+.about-box2 #restaurant {
+    text-align: center;
+    z-index: 1;
+
+}
+
+.about-box2 img {
+    height: 122px;
+}
+
+.arrow-right {
+    width: 120px;
+    width: 240px;
+    height: 24px;
+    background: url("../images/icon/arrowright.svg") no-repeat;
+    position: absolute;
+    top: 41px;
+    left: 213px;
+    animation: arrow-right 2.5s ease-in-out infinite;
+}
+
+@keyframes arrow-right {
+    0% {
+        transform: translateX(-160px);
+    }
+    100% {
+        width: 240px;
+        transform: translateX(0);
+    }
+}
+
+.arrow-left {
+    width: 120px;
+    width: 240px;
+    height: 24px;
+    background: url("../images/icon/arrowleft.svg") no-repeat;
+    display: block;
+    position: absolute;
+    top: 65px;
+    left: 248px;
+    animation: arrow-left 2.5s ease-in-out infinite;
+}
+
+@keyframes arrow-left {
+    0% {
+        transform: translateX(160px);
+    }
+    100% {
+        width: 240px;
+        transform: translateX(0);
+    }
+}
+
+.about-box2 #customer-p {
+    width: 256px;
+    height: 68px;
+    text-align: left;
+    padding: 9px 15px;
+    border: #8F6941 2px solid;
+    border-radius: 12px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.about-box2 #logo-mark {
+    text-align: center;
+    margin: 0 30px;
+    z-index: 1;
+}
+
+.about-box2 #restaurant-p {
+    width: 227px;
+    height: 92px;
+    text-align: left;
+    padding: 9px 15px;
+    border: #8F6941 2px solid;
+    border-radius: 12px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.about-box3 {
+    width: 800px;
+    text-align: center;
+}
+
+.about-box3-c {
+    display: flex;
+    justify-content: center;
+}
+
+.about-box3 h1 {
+    margin-bottom: 40px;
+}
+
+.step {
+    width: 42px;
+    padding: 12px 23px 0;
+    margin: 0;
+    text-align: center;
+}
+
+.step span:nth-child(1) {
+    width: 30px;
+    line-height: 30px;
+    color: #f4d775;
+    background-color: #ef8119;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.step span:nth-child(2) {
+    color: #ef8119;
+    padding: 4px 0;
+    display: inline-block;
+}
+
+.describe {
+    width: 342px;
+    text-align: left;
+    padding: 12px 20px;
+    border: 2px solid #8F6941;
+    border-radius: 15px;
+    margin: 0;
+    align-self: start;
+    box-sizing: border-box;
+}
+
+.arrow {
+    height: 46px;
+    line-height: 34px;
+    font-size: 40px;
+    font-weight: 200;
+    padding-left: 88px;
+}
+
+.db-arrow {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+.join-us {
+    text-align: center;
+    margin-top: 24px;
+    cursor: pointer;
+}
+
+/*-- 頁尾區 --*/
+footer {
+    color: #f4d775;
+    background-color: #ef8119;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/faq.css">
+    <link rel="icon" href="./images/LOGO/favicon.svg">
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/data.js"></script>
+    <script>
+        $(window).on('load resize', function () {
+            var h = document.documentElement.clientHeight;
+            var c = document.querySelector('.container');
+            if (h > 911) {
+                c.style.paddingBottom = h - 831.9 + 'px';
+            }
+        });
+        $(function () {
+            $('p.h5-r').hide();
+            $('.plus').click(function () {
+                $('~.h5-r', this).slideToggle('fast');
+                $(this).toggleClass('expand');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header class="bg-wheat">
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(orange).svg" alt="" id="logo-header"></a>
+        <!-- 導覽列 -->
+        <nav>
+            <ul id="nav-header" class="drp-dwn">
+                <li><a href="explore.html">發現</a></li>
+                <li><a href="./map.html">地圖</a></li>
+                <li><a href="favorites.html">最愛</a></li>
+                <li><a href="./about.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li>Hi! Anna 超人</li>
+            <li><a href="javascript:;"><img src="./images/icon/iconmonstr-bell-thin.svg" alt="" id="notice"></a></li>
+            <li>
+                <a href="javascript:;"><img src="./images/icon/avatar.svg" alt="" id="avatar-small"></a>
+                <ul>
+                    <li><a href="order.html">所有訂單</a></li>
+                    <li><a href="member.html">會員資料</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </header>
+
+    <!-- 內容區 -->
+    <main>
+        <div class="container">
+            <div id="logo"></div>
+            <h2 class="faq org">常見問題</h2>
+            <div class="box">
+                <button class="plus"></button>
+                <p class="h5">
+                    <span>Q1. </span>
+                    <span>是否會有貪小便宜的人故意只買剩食福袋，影響店家正常銷售？</span>
+                </p>
+                <p class="h5-r">
+                    <span>A1. </span>
+                    <span>福袋的內容無法指定，可能會拿到自己不愛吃的食物，或是較不受歡迎的品項。而且必須要在指定的時間前去領取，大多是店家打烊前，因此自由度和選擇度受限。福袋每日是限量的，數量並不多，不會影響店家銷售，反而是為店家創造額外收入。</span>
+                </p>
+            </div>
+            <div class="box">
+                <button class="plus"></button>
+                <p class="h5">
+                    <span>Q2. </span>
+                    <span>如果拿到的食物價值低於福袋價格怎麼辦？如何避免踩雷？</span>
+                </p>
+                <p class="h5-r">
+                    <span>A2. </span>
+                    <span>福袋的內容由店家自行決定，平台有評價功能，若拿到品質太差的福袋，可以給予低分評價，或是聯絡平台客服處理。消費者在購買之前也能查看店家評價決定是否訂購。</span>
+                </p>
+            </div>
+            <div class="box">
+                <button class="plus"></button>
+                <p class="h5">
+                    <span>Q3. </span>
+                    <span>該如何取消訂單？</span>
+                </p>
+                <p class="h5-r">
+                    <span>A3. </span>
+                    <span>店家最晚於領取時間1小時之前取消，若消費者臨時需要取消訂單，必須於1小時之前取消。取消後該份福袋會重新釋出，讓其他顧客訂購。</span>
+                </p>
+            </div>
+            <div class="box">
+                <button class="plus"></button>
+                <p class="h5">
+                    <span>Q4. </span>
+                    <span>前一天預定的餐點，如果遇到店家當天的庫存提前售完的情況該怎麼辦？</span>
+                </p>
+                <p class="h5-r">
+                    <span>A4. </span>
+                    <span>如果店家當天的剩食比預期中少而無法如期提供，最晚必須於取餐時間一個小時之前取消訂單。消費者也會接到平台的通知，避免白跑一趟。</span>
+                </p>
+            </div>
+            <h2 class="help org">仍需要協助？</h2>
+            <button class="contact bg-org h5-r">聯絡我們</button>
+        </div>
+
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer class="bg-wheat">
+        <p>&copy;2022 Food Wise Superman</p>
+        <nav>
+            <a href="faq.html">常見問題</a>
+            <a href="cooperation.html">店家合作</a>
+            <a href="javascript:;">服務條款</a>
+            <a href="javascript:;">隱私政策</a>
+        </nav>
+        <div id="sns">
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-line-brown.svg" alt=""></a>
+        </div>
+    </footer>
+</body>
+
+</html>

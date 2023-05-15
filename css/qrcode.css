@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  width: auto;
+}
+
+.container {
+  margin: 56px auto 0 auto;
+  text-align: center;
+  width: 1288px;
+  height: calc(100vh - 116px);
+  display: flex;
+  border: #e4e4e4 solid 2px;
+  border-top: none;
+  border-bottom: none;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+}
+.nav {
+  width: auto;
+  display: flex;
+}
+.title {
+  display: block;
+  height: auto;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  color: #8f6941;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+.title_a {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #8f6941;
+  letter-spacing: 0.03em;
+  margin-top: 5px;
+}
+.qrcode {
+  width: 426px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qrcode_img {
+  margin-top: 38px;
+  /* width: 245px;
+  height: 245px;
+  background-image: url(/img/素材/icon/QRcode\ 1.svg); */
+}
+.message {
+  margin-left: 98px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 440px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.number_tit {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  color: #ef8119;
+  margin-bottom: 10px;
+}
+.number {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 0.03em;
+  color: #8f6941;
+  margin-bottom: 20px;
+}
+.message hr {
+  border: 1px solid #e4e4e4;
+  width: 380px;
+  height: 0px;
+  margin-bottom: 20px;
+}
+.massage_nav {
+  width: 380px;
+  display: flex;
+  justify-content: flex-start;
+}
+.massage_title p {
+  margin-right: 20px;
+  margin-bottom: 13px;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #ef8119;
+}
+.massage_mg p {
+  margin-bottom: 13px;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #8f6941;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.found {
+  width: 183px;
+  height: 44px;
+  background: #ef8119;
+  border-radius: 32px;
+  border: none;
+  color: white;
+  margin-top: 28px;
+  margin-bottom: 30px;
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.found:hover {
+  background-color: #f1942e;
+}

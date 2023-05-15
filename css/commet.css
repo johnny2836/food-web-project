@@ -1,0 +1,105 @@
+/* 顧客評價 */
+#commet {
+    width: 700px;
+    height: 644px;
+    background-color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    margin: auto;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 13;
+    display: none;
+}
+
+/* 上方區塊 */
+.commet-box {
+    padding: 12px 0 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.esc {
+    line-height: 36px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+    border: none;
+    margin: 0 20px 0 0;
+    text-align: right;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#commet-title {
+    margin: 0 0 0 45px;
+}
+
+#commet-title span:nth-child(1) {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 26px;
+    letter-spacing: 0.05rem;
+}
+
+#commet-title img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+}
+
+/* 評論列表 */
+.commet-list {
+    width: 582px;
+    height: 470px;
+    padding: 0px 46px;
+    margin-top: 18px;
+    overflow-y: scroll;
+}
+
+/* 滾動條 */
+.commet-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* 滾動條-滑塊 */
+.commet-list::-webkit-scrollbar-thumb {
+    background-color: #7C7C7C;
+    border-radius: 10px;
+    height: 150px;
+}
+
+/* 滾動條-軌道 */
+.commet-list::-webkit-scrollbar-track {
+    background-color: #E4E4E4;
+    border-radius: 10px;
+}
+
+/* 評論卡片 */
+.commet {
+    padding: 20px 0;
+    border-bottom: 2px solid #E4E4E4;
+    display: flex;
+}
+
+.commet:first-child {
+    padding-top: 12px;
+}
+
+.commet:last-child {
+    border-bottom: none;
+}
+
+/* 頭像 */
+.commet>img {
+    margin-right: 30px;
+}
+
+/* 卡片文字 */
+.commet p {
+    margin: 9px 0;
+}

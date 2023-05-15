@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cooperation.css">
+    <link rel="icon" href="./images/LOGO/favicon.svg">
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header class="bg-wheat">
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(orange).svg" alt="" id="logo-header"></a>
+        <!-- 導覽列 -->
+        <nav>
+            <ul id="nav-header" class="drp-dwn">
+                <li><a href="explore.html">發現</a></li>
+                <li><a href="./map.html">地圖</a></li>
+                <li><a href="favorites.html">最愛</a></li>
+                <li><a href="./about.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li>Hi! Anna 超人</li>
+            <li><a href="javascript:;"><img src="./images/icon/iconmonstr-bell-thin.svg" alt="" id="notice"></a></li>
+            <li>
+                <a href="javascript:;"><img src="./images/icon/avatar.svg" alt="" id="avatar-small"></a>
+                <ul>
+                    <li><a href="order.html">所有訂單</a></li>
+                    <li><a href="member.html">會員資料</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </header>
+    <!-- 左側 -->
+    <div class="container">
+        <div class="step-box">
+            <h1>成為我們的合作商家，<br>一起為減少剩食努力！</h1>
+            <h2>訂單流程</h2>
+            <div class="step-list">
+                <div class="step-list-text">
+                    <h4>1.店家上傳</h4>
+                    <div class="h5-r">於前一天或當天，在平台<br>
+                        上傳指定時段的福袋數量</div>
+                </div>
+                <div class="step-list-text">
+                    <h4>2.顧客下單</h4>
+                    <div class="h5-r">
+                        顧客透過平台下單
+                    </div>
+                </div>
+                <div class="step-list-text">
+                    <h4>3.時段取餐</h4>
+                    <div class="h5-r">於指定時段等待顧客前來<br>取餐，並用APP確認訂單</div>
+                </div>
+            </div>
+        </div>
+        <!-- 成為合作店家 -->
+        <div class="content">
+            <h1>成為合作店家</h1>
+            <h5 class="title">店家名稱</h5>
+            <input type="text">
+            <h5 class="title">店家地址</h5>
+            <input type="text">
+            <h5 class="title">店家類型</h5>
+            <input type="text">
+            <div id="surname">
+                <h5 class="title">聯絡人姓氏</h5>
+                <input type="text">
+            </div>
+            <div id="name">
+                <h5 class="title">聯絡人名字</h5>
+                <input type="text">
+            </div>
+            <div class="clear-fix"></div>
+            <div class="phone-num">
+                <h5 class="title">手機號碼</h5>
+                <!-- 10個數字，09xx-xxx-xxx -->
+                <input type="tel" name="phone-num" id="phone-num-up" maxlength="10" pattern="[0][9]\d{8}"
+                    oninvalid="setCustomValidity('請輸入正確手機號碼格式：09xx-xxx-xxx');" required>
+            </div>
+            <h5 class="title">電子郵件</h5>
+            <!-- xxx@xxx.xxx -->
+            <input type="email" name="account" id="account" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        <button>
+            <h4>送出</h4>
+        </button>
+        </div>
+    </div>
+    </div>
+    <!-- 頁尾區 -->
+    <footer class="bg-wheat">
+        <p>&copy;2022 Food Wise Superman</p>
+        <nav>
+            <a href="faq.html">常見問題</a>
+            <a href="cooperation.html">店家合作</a>
+            <a href="javascript:;">服務條款</a>
+            <a href="javascript:;">隱私政策</a>
+        </nav>
+        <div id="sns">
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-line-brown.svg" alt=""></a>
+        </div>
+    </footer>
+
+</body>

@@ -1,0 +1,89 @@
+.container {
+    width: 1288px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    border-left: 2px solid #e4e4e4;
+    border-right: 2px solid #e4e4e4;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* LOGO */
+#logo {
+    width: 60px;
+    height: 60px;
+    background: url("../images/LOGO/favicon.svg") center / cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 標題 */
+h2.faq {
+    margin: 16px 0 32px;
+}
+
+h2.help {
+    margin-right: 16px;
+    display: inline-block;
+}
+
+/* Q&A */
+.box {
+    width: 768px;
+    text-align: left;
+    padding-top: 16px;
+    border-bottom: 2px solid #bebebe;
+    margin: 0 auto;
+}
+
+/* box1 */
+.container .box:nth-child(3) {
+    border-top: 2px solid #bebebe;
+}
+
+/* Q. */
+.h5{
+    margin: 0 0 20px;
+}
+
+/* A. 標題 */
+.h5-r span {
+    vertical-align: top;
+    display: inline-block;
+}
+
+/* A. 內容 */
+.h5-r span+span {
+    width: 675px;
+    text-align: justify;
+}
+
+/* 展開鈕 */
+.plus {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-image: url("../images/icon/icon-plus.svg");
+    float: right;
+}
+.expand{
+    background-image: url("../images/icon/icon-minus.svg");
+}
+/* 聯絡我們 */
+.contact {
+    margin-top: 230px;
+    width: 135px;
+    height: 44px;
+    border-radius: 32px;
+    border: none;
+    display: inline-block;
+}
+.container button{
+    transition: 0.3s;
+}
+.container button:hover {
+    background-color: #F1942E;
+}

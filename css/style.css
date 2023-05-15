@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+/* 類型 */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #796652;
+  outline: none;
+}
+input,
+textarea {
+  font-family: "Noto Sans TC", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  color: #7c7c7c;
+  outline: none;
+  font-size: 18px;
+}
+input:focus,
+textarea:focus {
+  border: 2px solid #ef8119;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #796652;
+}
+
+/* 文字樣式 */
+
+h1 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  letter-spacing: 0.05em;
+}
+
+h2,
+.h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.03em;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+}
+
+h4,
+.h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+h5,
+.h5 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+.h5-r {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.015em;
+}
+
+.h6-r {
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.015em;
+}
+
+small {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+}
+
+/* 共用 */
+.org {
+  color: #ef8119;
+}
+
+.grn {
+  color: #b8c764;
+}
+
+.brn {
+  color: #796652;
+}
+.wht {
+  color: #fff;
+}
+.blk {
+  color: #000;
+}
+
+.gry1 {
+  color: #7c7c7c;
+}
+
+.gry2 {
+  color: #bebebe;
+}
+
+.gry3 {
+  color: #e4e4e4;
+}
+
+.bg-org {
+  color: #fff;
+  background-color: #ef8119;
+}
+
+.bg-grn {
+  color: #fff;
+  background-color: #b8c764;
+}
+
+.bg-wheat {
+  color: #796652;
+  background-color: #f4d775;
+}
+
+.bg-wht {
+  background-color: #fff;
+}
+
+.clear-fix {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*-- 頁首區 --*/
+header {
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+}
+
+/* 下拉式 */
+ul.drp-dwn {
+  display: flex;
+}
+
+.drp-dwn > li {
+  text-align: center;
+  width: fit-content;
+}
+
+.drp-dwn a {
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  display: block;
+  transition: all 0.2s;
+}
+
+/* 第一層 */
+ul.drp-dwn > li {
+  position: relative;
+}
+
+.drp-dwn li:hover > a {
+  color: #ef8119;
+}
+
+/* 第二層 */
+.drp-dwn > li > ul {
+  position: absolute;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: none;
+}
+
+.drp-dwn li li {
+  background-color: #fff;
+}
+
+.drp-dwn li li a {
+  color: #796652;
+}
+
+.drp-dwn li li:hover > a {
+  color: #ef8119;
+}
+
+/*LOGO*/
+#logo-header {
+  width: 165px;
+  height: 40px;
+  position: absolute;
+  top: 8px;
+  left: 40px;
+}
+
+/* 導覽列 */
+nav {
+  width: 26%;
+  margin: auto;
+}
+
+#nav-header {
+  justify-content: space-between;
+}
+
+#nav-header li a {
+  padding-top: 17px;
+  padding-bottom: 5px;
+}
+
+.underline {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-bottom: 11px;
+  background-color: #ef8119;
+  border-radius: 5px 5px 0 0;
+  animation: underline 0.5s ease-out;
+}
+
+@keyframes underline {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/*使用者列*/
+#user-list {
+  line-height: 56px;
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
+
+#user-list > li > a {
+  height: 56px;
+}
+
+#user-list li ul {
+  border-radius: 10px;
+  right: -20px;
+}
+
+#user-list li li {
+  /* border-bottom: 2px solid #E4E4E4; */
+  text-align: left;
+  background-repeat: no-repeat;
+  background-position: 18px 10px;
+}
+
+#user-list li li:first-child {
+  background-image: url("../images/icon/icon-booking.svg");
+}
+
+#user-list li li:first-child:hover {
+  background-image: url("../images/icon/icon-booking-orange.svg");
+}
+
+#user-list li li:nth-child(2) {
+  background-image: url("../images/icon/icon-member.svg");
+}
+
+#user-list li li:nth-child(2):hover {
+  background-image: url("../images/icon/icon-member-orange.svg");
+}
+
+#user-list li li:nth-child(3) {
+  background-image: url("../images/icon/icon-help.svg");
+}
+
+#user-list li li:nth-child(3):hover {
+  background-image: url("../images/icon/icon-help-orange.svg");
+}
+
+#user-list li li:last-child {
+  background-image: url("../images/icon/icon-logout.svg");
+}
+
+#user-list li li:last-child:hover {
+  background-image: url("../images/icon/icon-logout-orange.svg");
+}
+
+#user-list li li a {
+  width: 91px;
+  line-height: 45px;
+  padding-left: 53px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+}
+
+#notice {
+  padding: 15px 20px;
+}
+
+#avatar-small {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+#sign {
+  width: 72px;
+  height: 34px;
+  color: #f4d775;
+  background-color: #ef8119;
+  border: 2px solid #f4d775;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*-- 內容區 --*/
+main {
+  padding-top: 56px;
+}
+
+/*-- 頁尾區 --*/
+footer {
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  position: relative;
+}
+
+footer p {
+  margin: 21px 0;
+  position: absolute;
+  left: 5%;
+}
+
+footer nav {
+  line-height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer #sns {
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 15px;
+  right: 5%;
+}
+
+/* lightbox */
+#lightbox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 12;
+  display: none;
+}

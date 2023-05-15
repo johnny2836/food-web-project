@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/jquery.cycle.all.js"></script>
+    <script src="./js/data.js"></script>
+    <script>
+        $(document).ready(function () {
+            // banner圖
+            $('#banner-pic').after('<div id="page">').cycle({
+                fx: 'scrollLeft',
+                delay: 3000,
+                timeOut: 0,
+                pager: '#page'
+            });
+            // 導覽列 目前頁面
+            $('#nav-header li:first-child a').after('<div class="underline"></div>');
+            $('#nav-header li:first-child a').css('color', '#ef8119');
+        });
+
+    </script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/explore.css">
+    <link rel="icon" href="./images/LOGO/favicon.svg">
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header class="bg-wheat">
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(orange).svg" alt="" id="logo-header"></a>
+        <!-- 導覽列 -->
+        <nav>
+            <ul id="nav-header" class="drp-dwn">
+                <li><a href="explore.html">發現</a></li>
+                <li><a href="./map.html">地圖</a></li>
+                <li><a href="favorites.html">最愛</a></li>
+                <li><a href="./about.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li>Hi! Anna 超人</li>
+            <li><a href="javascript:;"><img src="./images/icon/iconmonstr-bell-thin.svg" alt="" id="notice"></a></li>
+            <li>
+                <a href="javascript:;"><img src="./images/icon/avatar.svg" alt="" id="avatar-small"></a>
+                <ul>
+                    <li><a href="order.html">所有訂單</a></li>
+                    <li><a href="member.html">會員資料</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </header>
+
+    <!-- 內容區 -->
+    <main>
+        <!-- banner圖 -->
+        <div class="banner">
+            <div id="banner-pic">
+                <img src="./images/other/banner2.jpg" alt="">
+                <img src="./images/other/banner1.png" alt="">
+                <img src="./images/other/banner3.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- 地址 -->
+            <div id="location">
+                <input type="text" name="input-address" id="input-address" value="台北市中正區濟南路一段">
+                <img src="./images/icon/iconmonstr-crosshair.svg" alt="" id="icon-crosshair">
+            </div>
+            <!-- 搜尋 篩選 -->
+            <ul class="select drp-dwn h5-r">
+                <li id="search">
+                    <input type="text" name="input-search" id="input-search" placeholder="搜尋">
+                    <img src="./images/icon/icon-search.svg" alt="" id="icon-search">
+                </li>
+                <li class="choose h5">篩選
+                    <ul>
+                        <li id="nearby">附近</li>
+                        <li id="reserve">可預訂</li>
+                        <li id="new">新加入</li>
+                        <li id="commet-h">高評價</li>
+                        <li id="price-hl">價格 高→低</li>
+                        <li id="price-lh">價格 低→高</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear-fix"></div>
+        </div>
+
+        <!-- 店家列表 -->
+        <!-- 最後機會 -->
+        <h2 class="container">最後機會</h2>
+        <div class="last-chance">
+            <div class="btn-prev"></div>
+            <div class="btn-next"></div>
+            <div class="vendor-card-list container">
+                <div class="wrapper">
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘1份</span>
+                            <span class="price-pre">$220</span>
+                            <span class="price">$100</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">飛翔南洋料理</p>
+                                <span class="time">今日 20:00-21:30</span>
+                                <p>
+                                    <span class="score">4.2</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.3公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘2份</span>
+                            <span class="price-pre">$175</span>
+                            <span class="price">$80</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">LANO食堂</p>
+                                <span class="time">今日 13:00-14:00</span>
+                                <p>
+                                    <span class="score">4.3</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.6公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘1份</span>
+                            <span class="price-pre">$360</span>
+                            <span class="price">$180</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">順億鮪魚專賣店</p>
+                                <span class="time">今日 20:00-21:30</span>
+                                <p>
+                                    <span class="score">4.2</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.8公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘1份</span>
+                            <span class="price-pre">$240</span>
+                            <span class="price">$120</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">低卡健康廚房</p>
+                                <span class="time">今日 14:00-15:00</span>
+                                <p>
+                                    <span class="score">4.0</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.8公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘1份</span>
+                            <span class="price-pre">$110</span>
+                            <span class="price">$50</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">昀昀甜點</p>
+                                <span class="time">今日 20:00-21:00</span>
+                                <p>
+                                    <span class="score">4.4</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.9公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘1份</span>
+                            <span class="price-pre">$240</span>
+                            <span class="price">$120</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">Hala Chicken</p>
+                                <span class="time">今日 20:00-21:00</span>
+                                <p>
+                                    <span class="score">4.3</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.9公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘2份</span>
+                            <span class="price-pre">$450</span>
+                            <span class="price">$220</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">義瑪卡多</p>
+                                <span class="time">今日 19:30-20:30</span>
+                                <p>
+                                    <span class="score">4.1</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">3.7公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘1份</span>
+                            <span class="price-pre">$300</span>
+                            <span class="price">$150</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">歐奇窯烤披薩</p>
+                                <span class="time">今日 20:00-21:00</span>
+                                <p>
+                                    <span class="score">4.3</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">3.0公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 探索附近 -->
+        <h2 class="container">探索附近</h2>
+        <div class="nearby">
+            <div class="btn-prev"></div>
+            <div class="btn-next"></div>
+            <div class="vendor-card-list container">
+                <div class="wrapper">
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$190</span>
+                            <span class="price">$100</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">牛有廖</p>
+                                <span class="time">明日 19:30-20:30</span>
+                                <p>
+                                    <span class="score">4.3</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.0公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$240</span>
+                            <span class="price">$100</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">良作廚房</p>
+                                <span class="time">明日 21:00-21:30</span>
+                                <p>
+                                    <span class="score">4.0</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">0.6公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$105</span>
+                            <span class="price">$50</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">溫德德式烘焙餐館</p>
+                                <span class="time">明日 19:30-20:30</span>
+                                <p>
+                                    <span class="score">4.1</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">0.4公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$200</span>
+                            <span class="price">$100</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">泰嗨 健康餐盒</p>
+                                <span class="time">明日 20:00-21:30</span>
+                                <p>
+                                    <span class="score">4.2</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">0.7公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$200</span>
+                            <span class="price">$100</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">不萊梅義大利麵</p>
+                                <span class="time">明日 20:30-22:00</span>
+                                <p>
+                                    <span class="score">4.4</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">0.3公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$99</span>
+                            <span class="price">$50</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">丹堤咖啡</p>
+                                <span class="time">明日 18:00-18:30</span>
+                                <p>
+                                    <span class="score">4.4</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">0.2公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$95-398</span>
+                            <span class="price">$50-180</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">福利麵包</p>
+                                <span class="time">明日 19:30-20:30</span>
+                                <p>
+                                    <span class="score">4.4</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.0公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$170</span>
+                            <span class="price">$80</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">紅gimbap飯捲</p>
+                                <span class="time">明日 20:00-21:00</span>
+                                <p>
+                                    <span class="score">4.2</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">0.6公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 新加入 -->
+        <h2 class="container">新加入</h2>
+        <div class="new">
+            <div class="btn-prev"></div>
+            <div class="btn-next"></div>
+            <div class="vendor-card-list container">
+                <div class="wrapper">
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘5份</span>
+                            <span class="price-pre">$360</span>
+                            <span class="price">$180</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">FOOD GYM 附近餐飲</p>
+                                <span class="time">明日 20:30-22:00</span>
+                                <p>
+                                    <span class="score">4.1</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">3.6公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$248</span>
+                            <span class="price">$120</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">Body Fit 健康盒</p>
+                                <span class="time">明日 21:30-22:00</span>
+                                <p>
+                                    <span class="score">4.0</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.2公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$110</span>
+                            <span class="price">$50</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">粥師傅廣東粥</p>
+                                <span class="time">明日 21:00-22:00</span>
+                                <p>
+                                    <span class="score">4.1</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.6公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$125</span>
+                            <span class="price">$60</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">捌月肆日甜點坊</p>
+                                <span class="time">明日 19:30-21:00</span>
+                                <p>
+                                    <span class="score">4.3</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.8公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$220-340</span>
+                            <span class="price">$110-170</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">無麩質健康餐盒</p>
+                                <span class="time">明日 12:30-13:00</span>
+                                <p>
+                                    <span class="score">4.0</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.7公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$230</span>
+                            <span class="price">$110</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">佐藤精肉店 豚丼專門</p>
+                                <span class="time">明日 20:00-21:30</span>
+                                <p>
+                                    <span class="score">4.0</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.4公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$420</span>
+                            <span class="price">$200</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">微巷義大利小餐館</p>
+                                <span class="time">明日 20:30-21:30</span>
+                                <p>
+                                    <span class="score">4.3</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.7公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$75</span>
+                            <span class="price">$40</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">好好食光</p>
+                                <span class="time">明日 21:00-22:00</span>
+                                <p>
+                                    <span class="score">4.2</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.1公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 高評價 -->
+        <h2 class="container">高評價</h2>
+        <div class="commet-h">
+            <div class="btn-prev"></div>
+            <div class="btn-next"></div>
+            <div class="vendor-card-list container">
+                <div class="wrapper">
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$100-200</span>
+                            <span class="price">$50-100</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">一之軒信義店</p>
+                                <span class="time">明日 19:00-20:00</span>
+                                <p>
+                                    <span class="score">4.5</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.5公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$310</span>
+                            <span class="price">$150</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">Le Flam 樂芙坊</p>
+                                <span class="time">明日 20:00-21:00</span>
+                                <p>
+                                    <span class="score">4.8</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.4公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘4份</span>
+                            <span class="price-pre">$95</span>
+                            <span class="price">$50</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">小木屋鬆餅</p>
+                                <span class="time">明日 19:00-20:00</span>
+                                <p>
+                                    <span class="score">4.5</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.5公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$120</span>
+                            <span class="price">$60</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">哈肯舖手感烘焙</p>
+                                <span class="time">明日 20:00-21:00</span>
+                                <p>
+                                    <span class="score">4.7</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.1公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$100-180</span>
+                            <span class="price">$50-90</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">揪好廚房</p>
+                                <span class="time">明日 20:00-21:00</span>
+                                <p>
+                                    <span class="score">4.6</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">3.4公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$212</span>
+                            <span class="price">$100</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">金菊雞肉飯</p>
+                                <span class="time">明日 20:00-21:30</span>
+                                <p>
+                                    <span class="score">4.6</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.0公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$130</span>
+                            <span class="price">$70</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">摩德年代</p>
+                                <span class="time">明日 19:00-20:00</span>
+                                <p>
+                                    <span class="score">4.7</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">1.1公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like"></div>
+                    </div>
+                    <div class="vendor-card">
+                        <a href="./restaurant.html">
+                            <div class="pic">
+                                <div class="vendor-pic"></div>
+                            </div>
+                            <span class="last">剩餘3份</span>
+                            <span class="price-pre">$110</span>
+                            <span class="price">$50</span>
+                            <div class="vendor-info">
+                                <p class="vendor-name">露特西亞</p>
+                                <span class="time">明日 19:30-20:30</span>
+                                <p>
+                                    <span class="score">4.5</span>
+                                    <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                                    <span class="distance">2.5公里</span>
+                                </p>
+                            </div>
+                        </a>
+                        <div class="btn-like filled"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 全部店家 -->
+        <h2 class="container">全部店家</h2>
+        <div class="vendor-card-list all container all-vendor">
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$100-200</span>
+                    <span class="price">$50-100</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">一之軒信義店</p>
+                        <span class="time">明日 19:00-20:00</span>
+                        <p>
+                            <span class="score">4.5</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.5公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$190</span>
+                    <span class="price">$100</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">牛有廖</p>
+                        <span class="time">明日 19:30-20:30</span>
+                        <p>
+                            <span class="score">4.3</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.0公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$240</span>
+                    <span class="price">$100</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">良作廚房</p>
+                        <span class="time">明日 21:00-21:30</span>
+                        <p>
+                            <span class="score">4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">0.6公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$310</span>
+                    <span class="price">$150</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">Le Flam 樂芙坊</p>
+                        <span class="time">明日 20:00-21:00</span>
+                        <p>
+                            <span class="score">4.8</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.4公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘1份</span>
+                    <span class="price-pre">$220</span>
+                    <span class="price">$100</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">飛翔南洋料理</p>
+                        <span class="time">今日 20:00-21:30</span>
+                        <p>
+                            <span class="score">4.2</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.3公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$95</span>
+                    <span class="price">$50</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">小木屋鬆餅</p>
+                        <span class="time">明日 19:00-20:00</span>
+                        <p>
+                            <span class="score">4.5</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.5公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘2份</span>
+                    <span class="price-pre">$175</span>
+                    <span class="price">$80</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">LANO食堂</p>
+                        <span class="time">今日 13:00-14:00</span>
+                        <p>
+                            <span class="score">4.3</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.6公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘1份</span>
+                    <span class="price-pre">$360</span>
+                    <span class="price">$180</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">順億鮪魚專賣店</p>
+                        <span class="time">今日 20:00-21:30</span>
+                        <p>
+                            <span class="score">4.2</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.8公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘1份</span>
+                    <span class="price-pre">$240</span>
+                    <span class="price">$120</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">低卡健康廚房</p>
+                        <span class="time">今日 14:00-15:00</span>
+                        <p>
+                            <span class="score">4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.8公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$105</span>
+                    <span class="price">$50</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">溫德德式烘焙餐館</p>
+                        <span class="time">明日 19:30-20:30</span>
+                        <p>
+                            <span class="score">4.1</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">0.4公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$120</span>
+                    <span class="price">$60</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">哈肯舖手感烘焙</p>
+                        <span class="time">明日 20:00-21:00</span>
+                        <p>
+                            <span class="score">4.7</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.1公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$200</span>
+                    <span class="price">$100</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">泰嗨 健康餐盒</p>
+                        <span class="time">明日 20:00-21:30</span>
+                        <p>
+                            <span class="score">4.2</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">0.7公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘1份</span>
+                    <span class="price-pre">$110</span>
+                    <span class="price">$50</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">昀昀甜點</p>
+                        <span class="time">今日 20:00-21:00</span>
+                        <p>
+                            <span class="score">4.4</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.9公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘5份</span>
+                    <span class="price-pre">$360</span>
+                    <span class="price">$180</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">FOOD GYM 附近餐飲</p>
+                        <span class="time">明日 20:30-22:00</span>
+                        <p>
+                            <span class="score">4.1</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">3.6公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$200</span>
+                    <span class="price">$100</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">不萊梅義大利麵</p>
+                        <span class="time">明日 20:30-22:00</span>
+                        <p>
+                            <span class="score">4.4</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">0.3公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$248</span>
+                    <span class="price">$120</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">Body Fit 健康盒</p>
+                        <span class="time">明日 21:30-22:00</span>
+                        <p>
+                            <span class="score">4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.2公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$110</span>
+                    <span class="price">$50</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">粥師傅廣東粥</p>
+                        <span class="time">明日 21:00-22:00</span>
+                        <p>
+                            <span class="score">4.1</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.6公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$100-180</span>
+                    <span class="price">$50-90</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">揪好廚房</p>
+                        <span class="time">明日 20:00-21:00</span>
+                        <p>
+                            <span class="score">4.6</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">3.4公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$125</span>
+                    <span class="price">$60</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">捌月肆日甜點坊</p>
+                        <span class="time">明日 19:30-21:00</span>
+                        <p>
+                            <span class="score">4.3</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.8公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$220-340</span>
+                    <span class="price">$110-170</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">無麩質健康餐盒</p>
+                        <span class="time">明日 12:30-13:00</span>
+                        <p>
+                            <span class="score">4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.7公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$99</span>
+                    <span class="price">$50</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">丹堤咖啡</p>
+                        <span class="time">明日 18:00-18:30</span>
+                        <p>
+                            <span class="score">4.4</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">0.2公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘1份</span>
+                    <span class="price-pre">$240</span>
+                    <span class="price">$120</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">Hala Chicken</p>
+                        <span class="time">今日 20:00-21:00</span>
+                        <p>
+                            <span class="score">4.3</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.9公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$95-398</span>
+                    <span class="price">$50-180</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">福利麵包</p>
+                        <span class="time">明日 19:30-20:30</span>
+                        <p>
+                            <span class="score">4.4</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.0公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$212</span>
+                    <span class="price">$100</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">金菊雞肉飯</p>
+                        <span class="time">明日 20:00-21:30</span>
+                        <p>
+                            <span class="score">4.6</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.0公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$130</span>
+                    <span class="price">$70</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">摩德年代</p>
+                        <span class="time">明日 19:00-20:00</span>
+                        <p>
+                            <span class="score">4.7</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.1公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘2份</span>
+                    <span class="price-pre">$450</span>
+                    <span class="price">$220</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">義瑪卡多</p>
+                        <span class="time">今日 19:30-20:30</span>
+                        <p>
+                            <span class="score">4.1</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">3.7公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$110</span>
+                    <span class="price">$50</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">露特西亞</p>
+                        <span class="time">明日 19:30-20:30</span>
+                        <p>
+                            <span class="score">4.5</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.5公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘1份</span>
+                    <span class="price-pre">$300</span>
+                    <span class="price">$150</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">歐奇窯烤披薩</p>
+                        <span class="time">今日 20:00-21:00</span>
+                        <p>
+                            <span class="score">4.3</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">3.0公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$230</span>
+                    <span class="price">$110</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">佐藤精肉店 豚丼專門</p>
+                        <span class="time">明日 20:00-21:30</span>
+                        <p>
+                            <span class="score">4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.4公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$170</span>
+                    <span class="price">$80</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">紅gimbap飯捲</p>
+                        <span class="time">明日 20:00-21:00</span>
+                        <p>
+                            <span class="score">4.2</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">0.6公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like filled"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘3份</span>
+                    <span class="price-pre">$420</span>
+                    <span class="price">$200</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">微巷義大利小餐館</p>
+                        <span class="time">明日 20:30-21:30</span>
+                        <p>
+                            <span class="score">4.3</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">1.7公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+            <div class="vendor-card per">
+                <a href="./restaurant.html">
+                    <div class="pic">
+                        <div class="vendor-pic"></div>
+                    </div>
+                    <span class="last">剩餘4份</span>
+                    <span class="price-pre">$75</span>
+                    <span class="price">$40</span>
+                    <div class="vendor-info">
+                        <p class="vendor-name">好好食光</p>
+                        <span class="time">明日 21:00-22:00</span>
+                        <p>
+                            <span class="score">4.2</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span class="distance">2.1公里</span>
+                        </p>
+                    </div>
+                </a>
+                <div class="btn-like"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer class="bg-wheat">
+        <p>&copy;2022 Food Wise Superman</p>
+        <nav>
+            <a href="faq.html">常見問題</a>
+            <a href="cooperation.html">店家合作</a>
+            <a href="javascript:;">服務條款</a>
+            <a href="javascript:;">隱私政策</a>
+        </nav>
+        <div id="sns">
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-line-brown.svg" alt=""></a>
+        </div>
+    </footer>
+    <script>
+        // 剩餘 顏色
+        var last = document.querySelectorAll('.last');
+        for (var i = 0; i < last.length; i++) {
+            var v = last[i].innerHTML;
+            if (v.indexOf("1") >= 0 || v.indexOf("2") >= 0) {
+                last[i].style.backgroundColor = "#ff8964";
+            } else {
+                last[i].style.backgroundColor = "#B8C764";
+            }
+        }
+
+        $(function () {
+            // 背景圖
+            var card = document.querySelectorAll('.vendor-card');
+            for (var i = 0; i < card.length; i++) {
+                var v = $(card[i]).find('.vendor-name').html();
+                for (var j = 0; j < vendor.length; j++) {
+                    if (v.includes((vendor[j]).vendorName)) {
+                        $(card[i]).find('.vendor-pic').css('background', 'linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.5) 100%), url("./images/img/' + (vendor[j]).pic + '") center/cover');
+                    }
+                }
+            }
+
+            // 搜尋、篩選
+            $('.select li li,#icon-search').click(function () {
+                $('h2,.last-chance,.nearby,.new,.commet-h').css('display', 'none');
+            });
+            var per = document.querySelectorAll('.per');
+            // 搜尋
+            $('#icon-search').click(function () {
+                $(per).css('display', 'block');
+                var search = $('#input-search').val();
+                for (var i = 0; i < per.length; i++) {
+                    var v = $(per[i]).find('.vendor-name').html();
+                    if (v.includes(search) == false) {
+                        $(per[i]).css('display', 'none');
+                    }
+                }
+            });
+            // 附近
+            $('#nearby').click(function () {
+                $(per).css('display', 'block');
+                for (var i = 0; i < per.length; i++) {
+                    var d = $(per[i]).find('.distance').html();
+                    if (Number(d.substring(0, 3)) > 1) {
+                        $(per[i]).css('display', 'none');
+                    }
+                }
+            });
+            // 可預訂
+            $('#reserve').click(function () {
+                $(per).css('display', 'block');
+                for (var i = 0; i < per.length; i++) {
+                    var l = $(per[i]).find('.last').html();
+                    if (Number(l.substring(2, 3)) < 1) {
+                        $(per[i]).css('display', 'none');
+                    }
+                }
+            });
+            // 新加入
+            $('#new').click(function () {
+                $(per).css('display', 'block');
+                var now = new Date();
+                for (var i = 0; i < per.length; i++) {
+                    var v = $(per[i]).find('.vendor-name').html();
+                    for (var j = 0; j < vendor.length; j++) {
+                        if (v.includes((vendor[j]).vendorName)) {
+                            var join = new Date((vendor[j]).join);
+                            var m = parseInt(Math.abs(now - join)) / 1000 / 60 / 60 / 24 / 30;
+                            if (m > 1) {
+                                $(per[i]).css('display', 'none');
+                            }
+                        }
+                    }
+                }
+            });
+            // 高評價
+            $('#commet-h').click(function () {
+                $(per).css('display', 'block');
+                for (var i = 0; i < per.length; i++) {
+                    var s = $(per[i]).find('.score').html();
+                    if (Number(s < 4.5)) {
+                        $(per[i]).css('display', 'none');
+                    }
+                }
+            });
+            // 價格 高→低
+
+            // 價格 低→高
+
+            // 往左右滑動
+            var lastChance = 0;
+            var chX = 0;
+            $('.last-chance .btn-prev').click(function () {
+                if (lastChance > 0) {
+                    chX += 1320;
+                    $('.last-chance .wrapper').css('transform', 'translateX(' + chX + 'px)');
+                    lastChance -= 1;
+                    $('.last-chance .btn-next').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+            $('.last-chance .btn-next').click(function () {
+                if (lastChance < 1) {
+                    chX -= 1320;
+                    $('.last-chance .wrapper').css('transform', 'translateX(' + chX + 'px)');
+                    lastChance += 1;
+                    $('.last-chance .btn-prev').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+            var nearby = 0;
+            var nbX = 0;
+            $('.nearby .btn-prev').click(function () {
+                if (nearby > 0) {
+                    nbX += 1320;
+                    $('.nearby .wrapper').css('transform', 'translateX(' + nbX + 'px)');
+                    nearby -= 1;
+                    $('.nearby .btn-next').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+            $('.nearby .btn-next').click(function () {
+                if (nearby < 1) {
+                    nbX -= 1320;
+                    $('.nearby .wrapper').css('transform', 'translateX(' + nbX + 'px)');
+                    nearby += 1;
+                    $('.nearby .btn-prev').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+            var ne = 0;
+            var neX = 0;
+            $('.new .btn-prev').click(function () {
+                if (ne > 0) {
+                    neX += 1320;
+                    $('.new .wrapper').css('transform', 'translateX(' + neX + 'px)');
+                    ne -= 1;
+                    $('.new .btn-next').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+            $('.new .btn-next').click(function () {
+                if (ne < 1) {
+                    neX -= 1320;
+                    $('.new .wrapper').css('transform', 'translateX(' + neX + 'px)');
+                    ne += 1;
+                    $('.new .btn-prev').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+            var commeth = 0;
+            var chX = 0;
+            $('.commet-h .btn-prev').click(function () {
+                if (commeth > 0) {
+                    chX += 1320;
+                    $('.commet-h .wrapper').css('transform', 'translateX(' + chX + 'px)');
+                    commeth -= 1;
+                    $('.commet-h .btn-next').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+            $('.commet-h .btn-next').click(function () {
+                if (commeth < 1) {
+                    chX -= 1320;
+                    $('.commet-h .wrapper').css('transform', 'translateX(' + chX + 'px)');
+                    commeth += 1;
+                    $('.commet-h .btn-prev').css('opacity', '1');
+                    $(this).css('opacity', '0');
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/member.css">
+    <link rel="icon" href="./images/LOGO/favicon.svg">
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/data.js"></script>
+    <style>
+        .info input{
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var h = document.documentElement.clientHeight;
+            var c = document.querySelector('.container');
+            if (h > 838) {
+                c.style.height = h - 116 + 'px';
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header class="bg-wheat">
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(orange).svg" alt="" id="logo-header"></a>
+        <!-- 導覽列 -->
+        <nav>
+            <ul id="nav-header" class="drp-dwn">
+                <li><a href="explore.html">發現</a></li>
+                <li><a href="map.html">地圖</a></li>
+                <li><a href="favorites.html">最愛</a></li>
+                <li><a href="about.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li>Hi! Anna 超人</li>
+            <li><a href="javascript:;"><img src="./images/icon/iconmonstr-bell-thin.svg" alt="" id="notice"></a></li>
+            <li>
+                <a href="javascript:;"><img src="./images/icon/avatar.svg" alt="" id="avatar-small"></a>
+                <ul>
+                    <li><a href="order.html">所有訂單</a></li>
+                    <li><a href="member.html">會員資料</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </li>
+            <!-- <li><button id="sign">登入</button></li> -->
+        </ul>
+        </div>
+    </header>
+
+    <!-- 內容區 -->
+    <main>
+        <div class="container">
+            <!-- 頭像 -->
+            <div id="avatar"></div>
+            <button class="bg-org">變更</button>
+            <div class="box">
+                <!-- 個人資料 -->
+                <div class="info">
+                    <h4 class="org">個人資料</h4>
+                    <p class="h5">*姓名</p>
+                    <input type="text" name="name" id="name" value="Anna" placeholder="姓名" required>
+                    <p class="h5">*手機號碼</p>
+                    <!-- 10個數字，09xx-xxx-xxx -->
+                    <input type="tel" name="phone-num" id="phone-num" value="0912345678" placeholder="手機號碼"
+                        maxlength="10" pattern="[0][9]\d{8}" oninvalid="setCustomValidity('請輸入正確手機號碼格式：09xx-xxx-xxx');"
+                        required>
+                    <p class="h5">*電子郵件</p>
+                    <!-- xxx@xxx.xxx -->
+                    <input type="email" name="email" id="email" value="e0912345678@gmail.com" placeholder="電子郵件"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    <p class="h5">*密碼</p>
+                    <div class="pw">
+                        <!-- 6個字，包含1個英文字 -->
+                        <input type="password" name="password" id="password" value="e12345" placeholder="密碼 (含英數至少六個字)"
+                            pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" oninput="setCustomValidity('');"
+                            oninvalid="setCustomValidity('請輸入正確密碼格式：含英數至少六個字');" required>
+                    </div>
+                    <p class="h5">地址</p>
+                    <textarea name="address" id="address" rows="2" placeholder="地址">台北市中正區濟南路一段</textarea>
+                    <button class="bg-org">儲存</button>
+                </div>
+                <!-- 付款設定 -->
+                <div class="pay">
+                    <h4 class="org">付款設定</h4>
+                    <p class="card h5 org bg-wht">常用卡片</p>
+                    <p><span class="h5">持卡人姓名</span><span class="h5-r">陳*敏</span></p>
+                    <p><span class="h5">發卡銀行</span><span  class="h5-r"class="issuer">中國信託商業銀行</span></p>
+                    <p><span class="h5">卡片號碼</span><span class="h5-r">1234-****-****-9101</span></p>
+                    <button class="bg-org">變更</button>
+                </div>
+            </div>
+            <div class="clear-fix"></div>
+        </div>
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer class="bg-wheat">
+        <p>&copy;2022 Food Wise Superman</p>
+        <nav>
+            <a href="faq.html">常見問題</a>
+            <a href="cooperation.html">店家合作</a>
+            <a href="javascript:;">服務條款</a>
+            <a href="javascript:;">隱私政策</a>
+        </nav>
+        <div id="sns">
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-line-brown.svg" alt=""></a>
+        </div>
+    </footer>
+</body>
+
+</html>

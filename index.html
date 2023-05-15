@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <link rel="icon" href="./images/LOGO/favicon.svg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/data.js"></script>
+    <script>
+        window.onload = function animation(){
+            $('#slogan').addClass('bounce-in');
+            $('#more,#line,.db-arrow').addClass('easeInOut');
+            $('.vendor-card').addClass('slideLeft');
+        };
+        $(function () {
+            $('.join-us').click(function () {
+                $('#lightbox,#signUp').css('display', 'block');
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header>
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(yellow).svg" alt="" id="logo-header"></a>
+
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li><button id="sign">登入</button></li>
+        </ul>
+        </div>
+    </header>
+
+    <!-- 內容區 -->
+    <main>
+        <!-- 引導 -->
+        <section class="entry wht">
+            <img src="./images/icon/slogan-jinxuan-latte.svg" alt="" id="slogan"><br>
+            <div id="location">
+                <img src="./images/icon/iconmonstr-crosshair.svg" alt="" id="icon-crosshair">
+                <input type="text" name="input-address" id="input-address" placeholder="輸入地址以拯救剩食">
+            </div>
+            <p id="lead">與超過1000家店家合作<br>每拯救一餐剩食可減少2.5公斤碳排放</p>
+            <ul class="vendor-card-list container">
+                <div class="mask1"></div>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">哈肯舖手感烘焙</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">溫德德式烘焙餐館</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">佐藤精肉店 豚丼專門</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">飛翔南洋料理</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">小木屋鬆餅</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">Sunflower無麩質健康餐盒</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">哈肯舖手感烘焙</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">溫德德式烘焙餐館</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">佐藤精肉店 豚丼專門</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">飛翔南洋料理</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">小木屋鬆餅</p>
+                </li>
+                <li class="vendor-card">
+                    <div></div>
+                    <p class="h5">Sunflower無麩質健康餐盒</p>
+                </li>
+                <div class="mask2"></div>
+            </ul>
+            <p id="more"><a href="#about" class="wht">了解更多</a></p>
+            <div id="line" class="bg-wht"></div>
+        </section>
+        <!-- 關於我們 -->
+        <section id="about" class="bg-wheat">
+            <div class="about-title">關於我們</div>
+            <div class="about-box container">
+                <img src="./images/other/about1.jpg" alt="" class="about-pic" data-aos="fade-down"
+                    data-aos-duration="2000" data-aos-easing="ease-out">
+                <div class="about-box1 aos-init" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-out">
+                    <h1>你知道...<br>每天都有完整、新鮮的食物被大量丟棄嗎?</h1>
+                    <div class="about-box1-c h5-r">
+                        <p>聯合國農糧組織（FAO）的報告指出<br>
+                            全球每年有三分之一的糧食被白白浪費</p>
+                        <p>包含供應鏈的糧食損失（food loss）<br>
+                            消費端如家庭、餐廳、零售通路的糧食浪費（food waste）</p>
+                        <p>行政院環保署統計，臺灣在 2020 的廚餘回收量超過 52 萬<br>公噸，換算成廚餘桶堆疊起來可以達到 1.2 萬座臺北 101
+                            <br>的高度，而這個數據還不包括被誤丟到一般垃圾的廚餘
+                        </p>
+                        <p>雖然全球每年有這麼多糧食被浪費，全世界仍有約十分之一<br>的人口處於飢餓當中，食物浪費和貧窮、戰爭、經濟危機共<br>同名列飢餓的主因</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-box container">
+                <div class="about-box2" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+                    <h1>為解決剩食問題而生的平台</h1>
+                    <div class="about-box2-c">
+                        <div class="arrow-right"></div>
+                        <div class="arrow-left"></div>
+                        <div id="customer" class="h5-r">
+                            <img src="./images/icon/team.svg" alt="">
+                            <p>顧客</p>
+                            <p id="customer-p">兼具省錢的精神和福袋的驚喜感</p>
+                        </div>
+                        <div id="logo-mark" class="h5-r">
+                            <img src="./images/icon/logo.svg" alt="">
+                            <p>惜食超人</p>
+                        </div>
+                        <div id="restaurant" class="h5-r">
+                            <img src="./images/icon/restaurant.svg" alt="">
+                            <p>店家</p>
+                            <p id="restaurant-p">低價出售剩食<br>減少食物浪費和廚餘處理費用</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./images/other/about2.jpg" alt="" class="about-pic" data-aos="fade-down"
+                    data-aos-duration="1000" data-aos-easing="ease-out">
+            </div>
+            <div class="about-box container">
+                <img src="./images/other/about3.jpg" alt="" class="about-pic" data-aos="fade-down"
+                    data-aos-duration="1000" data-aos-easing="ease-out">
+                <div class="about-box3" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out">
+                    <h1>把即將被丟棄的食物變成省錢的好夥伴</h1>
+                    <div class="about-box3-c">
+                        <p class="step"><span>1</span><span class="h4">搜尋</span></p>
+                        <p class="describe h5-r">透過平台搜尋合作的店家，查看當日的剩食福袋</p>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="about-box3-c">
+                        <p class="step"><span>2</span><span class="h4">下單</span></p>
+                        <p class="describe h5-r">點選商品依指示進行下單，訂單將立刻確認</p>
+                    </div>
+                    <div class="arrow">↓</div>
+                    <div class="about-box3-c">
+                        <p class="step"><span>3</span><span class="h4">領取</span></p>
+                        <p class="describe h5-r">訂單狀態為「等待領取」時，於領取時段內到店自取<br>
+                            告知當日訂單編號並出示兌換畫面給店家確認</p>
+                    </div>
+                </div>
+            </div>
+            <img src="./images/icon/double-arrow.svg" alt="" class="db-arrow">
+            <h1 class="join-us org">立即加入我們</h1>
+        </section>
+    </main>
+    <!-- 頁尾區 -->
+    <footer>
+        <p>&copy;2022 Food Wise Superman</p>
+        <nav>
+            <a href="faq.html">常見問題</a>
+            <a href="cooperation.html">店家合作</a>
+            <a href="javascript:;">服務條款</a>
+            <a href="javascript:;">隱私政策</a>
+        </nav>
+        <div id="sns">
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-orange.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-orange.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-line-orange.svg" alt=""></a>
+        </div>
+    </footer>
+
+    <!-- lightbox -->
+    <div id="lightbox"></div>
+    <!-- 登入 -->
+    <!-- <form action="./explore.html" method="post" id="signIn"> -->
+    <form id="signIn">
+        <p class="esc">×</p>
+        <img src="./images/icon/logo.svg" alt="" id="logo">
+        <div class="content">
+            <p class="title">手機號碼</p>
+            <input type="tel" name="phone-num" id="phone-num-in" placeholder="手機號碼" maxlength="10" pattern="09\d{8}"
+                required>
+            <p class="title">密碼</p>
+            <div class="pw">
+                <img src="./images/icon/iconmonstr-eye.svg" alt="" class="eye">
+                <input type="password" name="password" id="password-in" placeholder="密碼" required>
+            </div>
+            <p id="forget-pw"><a href="javascript;">忘記密碼</a></p>
+            <a href="./explore.html"><button type="button" class="sign" id="sign-in">登入</button></a>
+        </div>
+        <p>或以其他帳號繼續</p>
+        <div class="sns-account">
+            <a href="javascript:;"><img src="./images/icon/icon-google.svg" alt="Google"></a>
+            <a href="javascript:;"><img src="./images/icon/icon-facebook.svg" alt="Facebook"></a>
+        </div></a>
+        <p id="agreement">繼續使用表示你同意我們的《<a href="javascript;">服務條款</a>》<br>並確認你已詳閱《<a href="javascript;">隱私政策</a>》</p>
+        <p id="sign-txt">還未加入惜食超人？<span><a href="javascript:;">註冊</a></span></p>
+    </form>
+    <!-- 註冊 -->
+    <!-- <form action="./explore.html" method="post" id="signUp"> -->
+    <form id="signUp">
+        <p class="esc">×</p>
+        <div class="content">
+            <div class="name">
+                <p class="title">姓名</p>
+                <input type="text" name="name" id="name" placeholder="姓名" required>
+            </div>
+            <div class="phone-num">
+                <p class="title">手機號碼</p>
+                <!-- 10個數字，09xx-xxx-xxx -->
+                <input type="tel" name="phone-num" id="phone-num-up" placeholder="手機號碼" maxlength="10"
+                    pattern="[0][9]\d{8}" oninvalid="setCustomValidity('請輸入正確手機號碼格式：09xx-xxx-xxx');" required>
+            </div>
+            <div class="clear-fix"></div>
+            <p class="title">電子郵件</p>
+            <!-- xxx@xxx.xxx -->
+            <input type="email" name="account" id="account" placeholder="電子郵件"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <p class="title">密碼</p>
+            <div class="pw">
+                <img src="./images/icon/iconmonstr-eye.svg" alt="" class="eye">
+                <!-- 6個字，包含1個英文字 -->
+                <input type="password" name="password" id="password-up" placeholder="密碼 (含英數至少六個字)"
+                    pattern="^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$" oninput="setCustomValidity('');"
+                    oninvalid="setCustomValidity('請輸入正確密碼格式：含英數至少六個字');" required>
+            </div>
+            <p class="title">確認密碼</p>
+            <div class="pw">
+                <img src="./images/icon/iconmonstr-eye.svg" alt="" class="eye">
+                <input type="password" name="password-check" id="password-check" placeholder="確認密碼"
+                    onchange="if(document.getElementById('password-up').value != document.getElementById('password-check').value){setCustomValidity('密碼不符合');} else{setCustomValidity('');}"
+                    required>
+            </div>
+            <a href="./explore.html"><button type="button" class="sign" id="sign-up">註冊</button></a>
+        </div>
+
+        <p>或以其他帳號繼續</p>
+        <div class="sns-account">
+            <a href="javascript:;"><img src="./images/icon/icon-google.svg" alt="Google"></a>
+            <a href="javascript:;"><img src="./images/icon/icon-facebook.svg" alt="Facebook"></a>
+        </div>
+        <p id="agreement">繼續使用表示你同意我們的《<a href="javascript;">服務條款</a>》<br>並確認你已詳閱《<a href="javascript;">隱私政策</a>》</p>
+        <p id="sign-txt">已經有帳號了？<span><a href="javascript:;">登入</a></span></p>
+    </form>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        var r1 = document.getElementById('sign-in');
+    </script>
+</body>
+
+</html>

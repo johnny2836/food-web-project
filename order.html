@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/data.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/order.css">
+    <link rel="icon" href="./images/LOGO/favicon.svg">
+    <script>
+        $(window).on('load resize', containerH);
+        $(window).on('load', stat);
+        function containerH() {
+            var h = document.documentElement.clientHeight;
+            var c = document.querySelector('.container');
+            if (h > 823) {
+                c.style.paddingBottom = h - (document.body.clientHeight-30) + 'px';
+            }
+        }
+        function stat() {
+            var stat = document.querySelectorAll('.stat');
+            for (i = 0; i < stat.length; i++) {
+                if (stat[i].textContent == '待評價') {
+                    stat[i].style.background = 'url("./images/icon/icon-processing.svg") no-repeat';
+                } else if (stat[i].textContent == '已評價') {
+                    stat[i].style.background = 'url("./images/icon/icon-completed.svg") no-repeat';
+                } else {
+                    stat[i].style.background = 'url("./images/icon/icon-cancelled.svg") no-repeat';
+                }
+            }
+        };
+        $(function () {
+            $('#history,.history .content').hide();
+            $('#new-btn').click(function () {
+                containerH();
+                if ($(this).hasClass('bg-wht')) {
+                    $('.order').show();
+                    $('#history').hide();
+                    $(this).toggleClass('bg-grn bg-wht gry2 active');
+                    $('#history-btn').toggleClass('bg-grn bg-wht gry2 active');
+                }
+            });
+            $('#history-btn').click(function () {
+                var c = document.querySelector('.container');
+                c.style.height = 'auto';
+                if ($(this).hasClass('bg-wht')) {
+                    $('.order').hide();
+                    $('#history').show();
+                    $(this).toggleClass('bg-grn bg-wht gry2 active');
+                    $('#new-btn').toggleClass('bg-grn bg-wht gry2 active');
+                }
+            });
+            $('#cancel-order').click(function () {
+                $('#lightbox,#cancel-box').css('display', 'block');
+            });
+            $('.yes').click(function () {
+                // $('.order').remove();
+                $('#lightbox,#cancel-box').css('display', 'none');
+                // $('.year').append(QR31BM);
+                // $('.content').hide();
+                // stat();
+            });
+            $('.arrow').click(function () {
+                $('~.content', this).slideToggle('slow');
+                $(this).toggleClass('expand');
+            });
+            $('.clear').click(function () {
+                $(this).siblings('.star').children('img').removeClass('clicked').attr('src', './images/icon/iconmonstr-star.svg');
+                $(this).siblings('textarea').val('');
+            });
+            $('.star').on('mouseenter', 'img', function () {
+                $(this).attr('src', './images/icon/iconmonstr-star-filled.svg').prevAll('img').attr('src', './images/icon/iconmonstr-star-filled.svg').end().nextAll('img').attr('src', './images/icon/iconmonstr-star.svg');
+            });
+            $('.star').on('mouseleave', function () {
+                $(this).children('img').attr('src', './images/icon/iconmonstr-star.svg');
+                $('.clicked').attr('src', './images/icon/iconmonstr-star-filled.svg').prevAll('img').attr('src', './images/icon/iconmonstr-star-filled.svg').end().nextAll('img').attr('src', './images/icon/iconmonstr-star.svg');
+            });
+            $('.star').on('click', 'img', function () {
+                $(this).addClass('clicked').siblings('img').removeClass('clicked');
+            });
+            $('.submit').click(function () {
+                var s = $(this).siblings('.star').html();
+                $(this).siblings('.contact').after('<div class="starr">' + s + '</div>');
+                var t = $(this).siblings('textarea').val();
+                $(this).siblings('.commet').text(t);
+                $(this).siblings('.star,textarea,.clear').remove().end().remove();
+            });
+            let QR31BM = `
+            <div class="history box">
+                <div class="arrow"></div>
+                <div class="card">
+                    <div class="pic"></div>
+                    <div class="info">
+                        <p class="h5-r brn">一之軒信義店</p>
+                        <p class="h5-r brn">2022.12.13</p>
+                        <p class="stat h5-r gry2">已取消</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <ul>
+                        <li><span class="num h5 org">編號</span><span class="h5-r">QR31BM</span></li>
+                        <li><span class="date h5 org">時間</span><span class="h5-r">2022年12月13日 18:00-20:00</span></li>
+                        <li><span class="address h5 org">地址</span><span class="h5-r">台北市大安區信義路二段226號</span></li>
+                        <li><span class="name h5 org">品項</span><span class="h5-r">麵包福袋</span></li>
+                        <li><span class="price h5 org">金額</span><span class="h5-r">50元</span></li>
+                        <li><span class="qty h5 org">數量</span><span class="h5-r">1份</span></li>
+                    </ul>
+                    <button class="vendor btn-l-left h5-r"><a href="./restaurant.html" class="org">店家資訊</a></button>
+                        <button class="contact btn-l h5-r bg-org">聯絡我們</button>
+                </div>
+            </div>
+            `;
+        });
+    </script>
+</head>
+
+
+
+<body>
+    <!-- 頁首區 -->
+    <header class="bg-wheat">
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(orange).svg" alt="" id="logo-header"></a>
+        <!-- 導覽列 -->
+        <nav>
+            <ul id="nav-header" class="drp-dwn">
+                <li><a href="explore.html">發現</a></li>
+                <li><a href="map.html">地圖</a></li>
+                <li><a href="favorites.html">最愛</a></li>
+                <li><a href="about.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li>Hi! Anna 超人</li>
+            <li><a href="javascript:;"><img src="./images/icon/iconmonstr-bell-thin.svg" alt="" id="notice"></a></li>
+            <li>
+                <a href="javascript:;"><img src="./images/icon/avatar.svg" alt="" id="avatar-small"></a>
+                <ul>
+                    <li><a href="order.html">所有訂單</a></li>
+                    <li><a href="member.html">會員資料</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </li>
+            <!-- <li><button id="sign">登入</button></li> -->
+        </ul>
+        </div>
+    </header>
+
+    <!-- 內容區 -->
+    <main>
+        <div class="container">
+            <!-- 新訂單、歷史紀錄 按鈕 -->
+            <div class="title">
+                <h5 id="new-btn" class="bg-grn active">新訂單</h5>
+                <h5 id="history-btn" class="gry2 bg-wht">歷史紀錄</h5>
+            </div>
+            <!-- 訂單 -->
+            <div class="order box">
+                <div class="card">
+                    <div class="pic"></div>
+                    <div class="info">
+                        <p class="num h5-r">QR31BM</p>
+                        <p class="h5-r">一之軒信義店</p>
+                        <p class="h5-r">明日 19:00-20:00</p>
+                    </div>
+                </div>
+                <div class="content">
+                    <h4 class="org">訂單編號</h4>
+                    <p class="num h2">QR31BM</p>
+                    <ul>
+                        <li><span class="address h5 org">地址</span><span class="h5-r">台北市大安區信義路二段226號</span></li>
+                        <li><span class="name h5 org">品項</span><span class="h5-r">麵包福袋</span></li>
+                        <li><span class="price h5 org">金額</span><span class="h5-r">50元</span></li>
+                        <li><span class="qty h5 org">數量</span><span class="h5-r">1份</span></li>
+                    </ul>
+                    <button class="vendor btn-l-left h5-r"><a href="./restaurant.html" class="org">店家資訊</a></button>
+                    <button id="cancel-order" class="btn-l h5-r">取消訂單</button>
+                </div>
+
+            </div>
+            <!-- 歷史紀錄 -->
+            <div id="history">
+                <h2 class="year org">2022年</h2>
+                <div class="history box">
+                    <div class="arrow"></div>
+                    <div class="card">
+                        <div class="pic"></div>
+                        <div class="info">
+                            <p class="h5-r">溫德德式烘焙餐館</p>
+                            <p class="h5-r">2022.11.20</p>
+                            <p class="stat h5-r org">待評價</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><span class="num h5 org">編號</span><span class="h5-r">QR31BM</span></li>
+                            <li><span class="date h5 org">時間</span><span class="h5-r">2022年11月20日 19:30-20:30</span>
+                            </li>
+                            <li><span class="address h5 org">地址</span><span class="h5-r">台北市大安區光復南路260巷28號</span>
+                            </li>
+                            <li><span class="name h5 org">品項</span><span class="h5-r">麵包福袋</span></li>
+                            <li><span class="price h5 org">金額</span><span class="h5-r">50元</span></li>
+                            <li><span class="qty h5 org">數量</span><span class="h5-r">1份</span></li>
+                        </ul>
+                        <button class="vendor btn-l-left h5-r"><a href="./restaurant.html" class="org">店家資訊</a></button>
+                        <button class="contact btn-l h5-r bg-org">聯絡我們</button>
+                        <div class="star">
+                            <img src="./images/icon/iconmonstr-star.svg">
+                            <img src="./images/icon/iconmonstr-star.svg">
+                            <img src="./images/icon/iconmonstr-star.svg">
+                            <img src="./images/icon/iconmonstr-star.svg">
+                            <img src="./images/icon/iconmonstr-star.svg">
+                        </div>
+                        <textarea name="commet-txt" class="commet-txt h5-r" rows="2" placeholder="分享你的經驗"></textarea>
+                        <p class="commet h5-r"></p>
+                        <button class="clear btn-s-left h5-r org bg-wht">清除</button>
+                        <button class="submit btn-s h5-r bg-org">送出</button>
+                    </div>
+                </div>
+                <div class="history box">
+                    <div class="arrow"></div>
+                    <div class="card">
+                        <div class="pic"></div>
+                        <div class="info">
+                            <p class="h5-r">小木屋鬆餅</p>
+                            <p class="h5-r">2022.10.20</p>
+                            <p class="stat h5-r gry2">已取消</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><span class="num h5 org">編號</span><span class="h5-r">QV73XO</span></li>
+                            <li><span class="date h5 org">時間</span><span class="h5-r">2022年11月20日 19:00-20:00</span>
+                            </li>
+                            <li><span class="address h5 org">地址</span><span class="h5-r">台北市大安區永康街15號之2號</span>
+                            </li>
+                            <li><span class="name h5 org">品項</span><span class="h5-r">鬆餅福袋</span></li>
+                            <li><span class="price h5 org">金額</span><span class="h5-r">50元</span></li>
+                            <li><span class="qty h5 org">數量</span><span class="h5-r">1份</span></li>
+                        </ul>
+                        <button class="vendor btn-l-left h5-r"><a href="./restaurant.html" class="org">店家資訊</a></button>
+                        <button class="contact btn-l h5-r bg-org">聯絡我們</button>
+                    </div>
+                </div>
+                <div class="history box">
+                    <div class="arrow"></div>
+                    <div class="card">
+                        <div class="pic"></div>
+                        <div class="info">
+                            <p class="h5-r">哈肯舖手感烘焙</p>
+                            <p class="h5-r">2022.08.10</p>
+                            <p class="stat h5-r grn">已評價</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><span class="num h5 org">編號</span><span class="h5-r">QP29MD</span></li>
+                            <li><span class="date h5 org">時間</span><span class="h5-r">2022年08月10日 20:00-21:00</span>
+                            </li>
+                            <li><span class="address h5 org">地址</span><span class="h5-r">台北市大安區信義路四段265巷18號</span>
+                            </li>
+                            <li><span class="name h5 org">品項</span><span class="h5-r">麵包福袋</span></li>
+                            <li><span class="price h5 org">金額</span><span class="h5-r">120元</span></li>
+                            <li><span class="qty h5 org">數量</span><span class="h5-r">2份</span></li>
+                        </ul>
+                        <button class="vendor btn-l-left h5-r"><a href="./restaurant.html" class="org">店家資訊</a></button>
+                        <button class="contact btn-l h5-r bg-org">聯絡我們</button>
+                        <div class="starr">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                        </div>
+                        <p class="commet h5-r">給的麵包種類沒有重複，每個都很好吃！</p>
+                    </div>
+                </div>
+                <div class="history box">
+                    <div class="arrow"></div>
+                    <div class="card">
+                        <div class="pic"></div>
+                        <div class="info">
+                            <p class="h5-r">福利麵包</p>
+                            <p class="h5-r">2022.06.05</p>
+                            <p class="stat h5-r grn">已評價</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <ul>
+                            <li><span class="num h5 org">編號</span><span class="h5-r">QJ41ZL</span></li>
+                            <li><span class="date h5 org">時間</span><span class="h5-r">2022年06月05日 18:00-20:00</span>
+                            </li>
+                            <li><span class="addess h5 org">地址</span><span class="h5-r">台北市中正區北平西路3號</span>
+                            </li>
+                            <li><span class="name h5 org">品項</span><span class="h5-r">麵包福袋</span></li>
+                            <li><span class="price h5 org">金額</span><span class="h5-r">120元</span></li>
+                            <li><span class="qty h5 org">數量</span><span class="h5-r">2份</span></li>
+                        </ul>
+                        <button class="vendor btn-l-left h5-r"><a href="restaurant.html" class="org">店家資訊</a></button>
+                        <button class="contact btn-l h5-r bg-org">聯絡我們</button>
+                        <div class="starr">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                            <img src="./images/icon/iconmonstr-star-filled.svg">
+                        </div>
+                        <p class="commet h5-r">一個福袋裡有4個麵包，很划算。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer class="bg-wheat">
+        <p>&copy;2022 Food Wise Superman</p>
+        <nav>
+            <a href="faq.html">常見問題</a>
+            <a href="cooperation.html">店家合作</a>
+            <a href="javascript:;">服務條款</a>
+            <a href="javascript:;">隱私政策</a>
+        </nav>
+        <div id="sns">
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-line-brown.svg" alt=""></a>
+        </div>
+    </footer>
+
+    <!-- lightbox -->
+    <div id="lightbox"></div>
+    <!-- 取消提示 -->
+    <div id="cancel-box">
+        <p class="esc">×</p>
+        <div class="clear-fix"></div>
+        <p class="tip h5-r">取消訂單後該福袋將會釋出，確定要取消嗎？</p>
+        <button class="no btn-s-left org">否</button>
+        <button class="yes btn-s bg-org">是</button>
+    </div>
+
+    <script>
+        $(function () {
+            var p = $('.history .pic');
+            for (var i = 0; i < p.length; i++) {
+                var info = $(p[i]).siblings('.info').html();
+                for (var j = 0; j < product.length; j++) {
+                    if (info.includes((product[j]).vendorName)) {
+                        $(p[i]).css('background-image', 'url("./images/img/' + (product[j]).pic + '")');
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

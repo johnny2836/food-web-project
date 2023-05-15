@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/sign.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/check_page.css">
+    <link rel="icon" href="./img/LOGO/favicon.svg">
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header class="bg-wheat">
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(orange).svg" alt="" id="logo-header"></a>
+        <!-- 導覽列 -->
+        <nav>
+            <ul id="nav-header" class="drp-dwn">
+                <li><a href="explore.html">發現</a></li>
+                <li><a href="./map.html">地圖</a></li>
+                <li><a href="favorites.html">最愛</a></li>
+                <li><a href="./about.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li>Hi! Anna 超人</li>
+            <li><a href="javascript:;"><img src="./images/icon/iconmonstr-bell-thin.svg" alt="" id="notice"></a></li>
+            <li>
+                <a href="javascript:;"><img src="./images/icon/avatar.svg" alt="" id="avatar-small"></a>
+                <ul>
+                    <li><a href="order.html">所有訂單</a></li>
+                    <li><a href="member.html">會員資料</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="container">
+            <div class="container_left">
+                <p class="tit"><span class="span_title">1</span><span class="span_title_name">預定詳情</span></p>
+                <div class="store">
+                    <p class="store_name">一之軒信義店</p>
+                    <p class="store_time">取餐時間:明日19:00~20:00</p>
+                    <p class="store_location">地址:台北市大安區信義路二段226號</p>
+                    <p class="store_map">
+
+                    </p>
+                </div>
+                <p class="tit"><span class="span_title">2</span><span class="span_title_name">付款方式</span></p>
+                <div class="pay">
+                    <div class="pay_way">
+                        <div class="way_card test way_card_cover">
+                            <input type="radio" name="pay_way" id="way_card" class="way" checked
+                                onclick="change() "><label for="way_card" class="way_label"><span
+                                    class="radio_button"></span><img src="./img/素材/icon/credit-card.svg" alt="">
+                                <div class="way_title">常用卡片</div>
+                            </label>
+                        </div>
+                        <div class="way_newCard  test">
+                            <input type="radio" name="pay_way" id="way_newCard" class="way" onclick="change()"><label
+                                for="way_newCard" class="way_label"><span class="radio_button1"></span><img
+                                    src="./img/素材/icon/addcard.svg" alt="">
+                                <div class="way_title">新增卡片</div>
+                            </label>
+                        </div>
+
+                        <div class="way_apple test">
+                            <input type="radio" name="pay_way" id="way_apple" class="way" onclick="change()"><label
+                                for="way_apple" class="way_label"><span class="radio_button1"></span><img
+                                    src="./img/素材/icon/apple-pay.svg" alt="">
+                                <div class="way_title"></div>
+                            </label>
+                        </div>
+                        <div class="way_google test">
+                            <input type="radio" name="pay_way" id="way_google" class="way" onclick="change()"><label
+                                for="way_google" class="way_label"><span class="radio_button1"></span><img
+                                    src="./img/素材/icon/google-pay.svg" alt="">
+                                <div class="way_title"></div>
+                            </label>
+                        </div>
+                        <div class="way_line test">
+                            <input type="radio" name="pay_way" id="way_line" class="way" onclick="change()"><label
+                                for="way_line" class="way_label"><span class="radio_button1"></span><img
+                                    src="./img/素材/icon/LINE-Pay(h)_W238_n 2.svg" alt="">
+                                <div class="way_title"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="card_message ">
+                        <label class="card_name">持卡人姓名
+                            <input type="text" name="card_name" id="card_name" placeholder="請輸卡片上的姓名" maxLen="2" hidden>
+                            <span>陳*敏</span>
+                        </label>
+                        <label class="card_number">信用卡號
+                            <div class="card_number_input" for="card_number" maxlength="5">
+
+                                <img src="./images/icon/Frame 87.png" alt="">
+                                <span>中國信託商業銀行</span>
+                            </div>
+                        </label>
+                        <label class="card_date">卡片號碼
+                            <div class="card_date_input" for="card_date">
+
+                                1234-****-****-9101
+                            </div>
+                        </label>
+                        <button class="card_delete">刪除卡片</button>
+                    </div>
+                    <div class="pay_message none">
+                        <label class="card_name">持卡人姓名
+                            <input type="text" name="pay_message_input" oninput="check_input()" id="card_name" )>
+                        </label>
+                        <label class="card_number">信用卡號
+                            <div class="card_number_input" for="card_number" maxlength="5"><input type="text"
+                                    name="pay_message_input" onchange="" id="card_number"
+                                    oninput="value=value.replace(/[^\d]/g,'');check_input()"
+                                    maxlength="4"><span>-</span><input type="text" name="pay_message_input"
+                                    onchange="check_input()" id="card_number"
+                                    oninput="value=value.replace(/[^\d]/g,'');check_input()"
+                                    maxlength="4"><span>-</span><input type="text" name="pay_message_input"
+                                    onchange="check_input()" id="card_number"
+                                    oninput="value=value.replace(/[^\d]/g,'');check_input()"
+                                    maxlength="4"><span>-</span><input type="text" name="pay_message_input"
+                                    onchange="check_input()" id="card_number"
+                                    oninput="value=value.replace(/[^\d]/g,'');check_input()" maxlength="4">
+                            </div>
+                        </label>
+                        <label class="card_date">有效日期
+                            <div class="card_date_input" for="card_date"><input type="text" name="pay_message_input"
+                                    onchange="" id="card_date" placeholder="MM"
+                                    oninput="if(value>12)value=12;value=value.replace(/[^\d]/g,'');check_input()"
+                                    maxlength="2"><span>-</span><input type="text" name="pay_message_input"
+                                    onchange="check_input()" id="card_date" placeholder="YY"
+                                    oninput=";value=value.replace(/[^\d]/g,'');check_input()" maxlength="2"></div>
+                        </label>
+                        <label class="card_verify">末三碼
+                            <div class="card_verify_input" for="card_verify"><input type="text" name="pay_message_input"
+                                    oninput="value=value.replace(/[^\d]/g,''),check_input();check_input()" maxlength="3"
+                                    id="card_verify"><img src="./img/素材/icon/cvv 1.svg" alt="">
+                            </div>
+                        </label>
+                        <button class="card_save" disabled>存為常用卡片</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container_right">
+                <div class="shopping">
+                    <p class="tit3"><span class="span_title">3</span><span class="span_title_name">結帳</span>
+                    </p>
+                    <div class="shopping_photo">
+                        <div class="photo"><img src="./img/素材/img/ijysheng-cranberry-cheese-bread.jpeg" alt=""></div>
+                        <p class="product_name">麵包福袋x1</p>
+                    </div>
+                    <div class="tip_note">
+                        <div class="diy"><input type="checkbox" id="diy"><label for="diy" class="diy_label"><span
+                                    class="checked_button"></span></label>
+                            <div class="diy_title">自備餐盒</div>
+                        </div>
+                        <div class="diy"><input type="checkbox" id="tips"><label for="tips" class="diy_label"><span
+                                    class="checked_button"></span></label>
+                            <div class="diy_title">優惠券</div>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <input type="text" placeholder="請輸入優惠卷代碼" class="tip"><br>
+                        <span>備註</span><br>
+                        <input type="text" placeholder="請輸入備註" class="note_input">
+
+                    </div>
+                    <div class="tot">
+                        <p>總計 $50</p>
+                        <a href="./qrcode.html" class="pay_a"><button class=" pay_button pay_button_cover">結帳</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-wheat">
+        <p>&copy;2022 Food Wise Superman</p>
+        <nav>
+            <a href="faq.html">常見問題</a>
+            <a href="cooperation.html">店家合作</a>
+            <a href="javascript:;">服務條款</a>
+            <a href="javascript:;">隱私政策</a>
+        </nav>
+        <div id="sns">
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-brown.svg" alt=""></a>
+            <a href="javascript:;"><img src="./images/icon/iconmonstr-line-brown.svg" alt=""></a>
+        </div>
+    </footer>
+    <div id="box"></div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>惜食超人</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet"/>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/data.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/restaurant.css">
+    <link rel="stylesheet" href="./css/commet.css">
+    <link rel="icon" href="./images/LOGO/favicon.svg">
+    <script>
+        $(function () {
+            // 顧客評價 全部
+            $('.vendor-commet').click(function () {
+                $('#lightbox,#commet').css('display', 'block');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 頁首區 -->
+    <header class="bg-wheat">
+        <!-- LOGO -->
+        <a href="./index.html"><img src="./images/LOGO/logo(orange).svg" alt="" id="logo-header"></a>
+        <!-- 導覽列 -->
+        <nav>
+            <ul id="nav-header" class="drp-dwn">
+                <li><a href="explore.html">發現</a></li>
+                <li><a href="./map.html">地圖</a></li>
+                <li><a href="favorites.html">最愛</a></li>
+                <li><a href="./about.html">關於我們</a></li>
+            </ul>
+        </nav>
+        <!-- 使用者列 -->
+        <ul id="user-list" class="drp-dwn">
+            <li>Hi! Anna 超人</li>
+            <li><a href="javascript:;"><img src="./images/icon/iconmonstr-bell-thin.svg" alt="" id="notice"></a></li>
+            <li>
+                <a href="javascript:;"><img src="./images/icon/avatar.svg" alt="" id="avatar-small"></a>
+                <ul>
+                    <li><a href="order.html">所有訂單</a></li>
+                    <li><a href="member.html">會員資料</a></li>
+                    <li><a href="faq.html">常見問題</a></li>
+                    <li><a href="index.html">登出</a></li>
+                </ul>
+            </li>
+            <!-- <li><button id="sign">登入</button></li> -->
+        </ul>
+        </div>
+    </header>
+
+    <!-- 內容區 -->
+    <main>
+        <div class="vendor">
+            <!-- 圖片 -->
+            <img src="" alt="" class="vendor-pic">
+            <!-- 介紹 -->
+            <div class="vendor-content container">
+                <!-- 資訊 -->
+                <div class="vendor-info">
+                    <h1>一之軒信義店</h1>
+                    <p>
+                        <span class="vendor-sore">4.5</span>
+                        <span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <img src="./images/icon/iconmonstr-star-half.svg" alt="">
+                        </span>
+                        <span class="vendor-commet">10 則評價</span>
+                    </p>
+                    <p class="vendor-address">台北市大安區信義路二段226號</p>
+                    <p>
+                        <span class="product-tag">#麵包</span>
+                        <span class="product-tag">#蔬食</span>
+                    </p>
+                </div>
+                <!-- 簡介 -->
+                <div class="vendor-introduction">
+                    <h2>簡介</h2>
+                    <p class="h5-r">
+                        以「快樂、利他、分享」為企業文化的一之軒，堅持用美味打造屬於庶民經濟、傳統零距離的「烘焙．幸福」。<br>對一之軒來說，烘焙美食就是生活中平凡可及的滋味。要創造的不只是商品本身擁有體驗的元素，甚至是購物的過程，也應該要讓消費者感受的體驗享受。
+                    </p>
+                </div>
+                <!-- 最愛按鈕 -->
+                <div class="btn-like filled"></div>
+            </div>
+            <!-- 餐點種類 -->
+            <h2 class="container">餐點種類</h2>
+            <div class="product-card-list container">
+                <div class="product-card">
+                    <img src="./images/img/ijysheng-cranberry-cheese-bread.jpeg" alt="" class="product-pic">
+                    <div class="product-info">
+                        <div class="product-name">麵包福袋</div>
+                        <div class="product-describe">三明治、雜糧麵包等</div>
+                        <div class="product-price">$50</div>
+                    </div>
+                    <h3 class="product-last">3</h3>
+                </div>
+                <div class="product-card">
+                    <img src="./images/img/ijysheng-honey-cake.jpg" alt="" class="product-pic">
+                    <div class="product-info">
+                        <p class="product-name">蛋糕福袋</p>
+                        <p class="product-describe">蛋糕、甜點等</p>
+                        <p class="product-price">$100</p>
+                    </div>
+                    <h3 class="product-last">1</h3>
+                </div>
+            </div>
+            <!-- 顧客評價 -->
+            <p class="commet-title container">
+                <span>評價</span>
+                <span>4.5</span>
+                <img src="./images/icon/iconmonstr-star-filled-l.svg" alt="">
+                <span class="vendor-commet">10 則評價</span>
+            </p>
+            <div class="commet-card-list container">
+                <div class="commet-card">
+                    <img src="./images/icon/avatar1.svg" alt="" class="commet-avatar">
+                    <div class="commet-info">
+                        <p class="commet-top">
+                            <span>5.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span>1個月前</span>
+                        </p>
+                        <p class="commet-content">食物新鮮，份量也超乎預期，CP值超高！</p>
+                    </div>
+                </div>
+                <div class="commet-card">
+                    <img src="./images/icon/avatar2.svg" alt="" class="commet-avatar">
+                    <div class="commet-info">
+                        <p class="commet-top">
+                            <span>4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span>1個月前</span>
+                        </p>
+                        <p class="commet-content">麵包很好吃，蛋糕也是。</p>
+                    </div>
+                </div>
+                <div class="commet-card">
+                    <img src="./images/icon/avatar3.svg" alt="" class="commet-avatar">
+                    <div class="commet-info">
+                        <p class="commet-top">
+                            <span>4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span>2個月前</span>
+                        </p>
+                        <p class="commet-content">點心美味，服務一級棒！</p>
+                    </div>
+                </div>
+                <div class="commet-card">
+                    <img src="./images/icon/avatar4.svg" alt="" class="commet-avatar">
+                    <div class="commet-info">
+                        <p class="commet-top">
+                            <span>5.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span>2個月前</span>
+                        </p>
+                        <p class="commet-content">食品美味，服務親切。</p>
+                    </div>
+                </div>
+                <div class="commet-card">
+                    <img src="./images/icon/avatar5.svg" alt="" class="commet-avatar">
+                    <div class="commet-info">
+                        <p class="commet-top">
+                            <span>5.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span>2個月前</span>
+                        </p>
+                        <p class="commet-content">服務好、產品樣式多、價格合理、好吃</p>
+                    </div>
+                </div>
+                <div class="commet-card">
+                    <img src="./images/icon/avatar6.svg" alt="" class="commet-avatar">
+                    <div class="commet-info">
+                        <p class="commet-top">
+                            <span>4.0</span>
+                            <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                            <span>3個月前</span>
+                        </p>
+                        <p class="commet-content">全素麵包種類多！</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 頁尾區 -->
+            <footer class="bg-wheat">
+                <p>&copy;2022 Food Wise Superman</p>
+                <nav>
+                    <a href="faq.html">常見問題</a>
+                    <a href="cooperation.html">店家合作</a>
+                    <a href="javascript:;">服務條款</a>
+                    <a href="javascript:;">隱私政策</a>
+                </nav>
+                <div id="sns">
+                    <a href="javascript:;"><img src="./images/icon/iconmonstr-facebook-brown.svg" alt=""></a>
+                    <a href="javascript:;"><img src="./images/icon/iconmonstr-instagram-brown.svg" alt=""></a>
+                    <a href="javascript:;"><img src="./images/icon/iconmonstr-line-brown.svg" alt=""></a>
+                </div>
+            </footer>
+        </div>
+        <!-- 購物車 -->
+        <div class="cart">
+            <div>
+                <div id="cart-pic"></div>
+                <p id="cart-name">麵包福袋</p>
+                <p id="cart-last">剩餘3份</p>
+                <p id="cart-time">
+                    <span>取餐時間</span><br>
+                    <span>明日 19:00-20:00</span>
+                </p>
+                <p id="cart-describe">3-4個美味麵包</p>
+            </div>
+            <div>
+                <div class="button">
+                    <button id="qty-minus">-</button>
+                    <p id="qty-need">1</p>
+                    <button id="qty-plus">+</button>
+                </div>
+                <p id="cart-price">$50</p>
+                <button id="cart-reservation">預訂</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- lightbox -->
+    <div id="lightbox"></div>
+    <!-- 顧客評價 全部 -->
+    <div id="commet">
+        <div class="commet-box">
+            <p class="esc">×</p>
+            <div class="clear-fix"></div>
+            <p id="commet-title"><span>4.5</span><img src="./images/icon/iconmonstr-star-filled-l.svg" alt=""><span
+                    class="h5">10則評價</span></p>
+        </div>
+        <div class="commet-list">
+            <div class="commet">
+                <img src="./images/icon/avatar1.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>5.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>1個月前</span>
+                    </p>
+                    <p class="h5-r">食物新鮮，份量也超乎預期，CP值超高！</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar2.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>4.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>1個月前</span>
+                    </p>
+                    <p class="h5-r">麵包很好吃，蛋糕也是。</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar3.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>4.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>2個月前</span>
+                    </p>
+                    <p class="h5-r">點心美味，服務一級棒！</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar4.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>5.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>2個月前</span>
+                    </p>
+                    <p class="h5-r">食品美味，服務親切。</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar5.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>5.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>2個月前</span>
+                    </p>
+                    <p class="h5-r">服務好、產品樣式多、價格合理、好吃</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar6.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>4.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>3個月前</span>
+                    </p>
+                    <p class="h5-r">全素麵包種類多！</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar7.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>5.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>3個月前</span>
+                    </p>
+                    <p class="h5-r">蛋糕口味不會太甜，品質也很新鮮。</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar8.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>5.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>3個月前</span>
+                    </p>
+                    <p class="h5-r">蜂蜜蛋糕好吃，還有隱藏版的蜂蜜蛋糕，更加好吃。蛋塔跟麻糬也很好吃，尤其是抹茶紅豆麻糬，抹茶香，紅豆甜，很有日本風情。</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar9.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>4.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>3個月前</span>
+                    </p>
+                    <p class="h5-r">好吃的麵包店、麵包種類繁多應有盡有，也有甜點禮盒送禮自用兩相宜。</p>
+                </div>
+            </div>
+            <div class="commet">
+                <img src="./images/icon/avatar10.svg" alt="" class="commet-avatar">
+                <div class="commet-info">
+                    <p class="h5">
+                        <span>4.0</span>
+                        <img src="./images/icon/iconmonstr-star-filled.svg" alt="">
+                        <span>4個月前</span>
+                    </p>
+                    <p class="h5-r">最喜歡一之軒的麻糬和綠豆糕了，花生口味是我吃過的麻糬裡面最好吃的！！店員態度、服務好，也很會推銷 :)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 餐點
+        $(function () {
+            $('.product-card').click(function () {
+                for (var i = 0; i < product.length; i++) {
+                    if ($(this).find('.product-name').text() == product[i].productName && $('h1').text() == product[i].vendorName) {
+                        document.getElementById('cart-pic').style.backgroundImage = 'url("../images/img/' + product[i].pic + '")';
+                        document.getElementById('cart-name').textContent = product[i].productName;
+                        var l = document.getElementById('cart-last');
+                        if (product[i].qty == 1) {
+                            l.style.backgroundColor = '#ff8964';
+                        }else{
+                            l.style.backgroundColor = '#B8C764';
+                        }
+                        l.textContent = '剩餘' + product[i].qty + '份';
+                        document.querySelector('#cart-time span:nth-child(3)').textContent = product[i].time;
+                        document.getElementById('cart-describe').textContent = product[i].content;
+                        document.getElementById('qty-need').textContent = '1';
+                        document.getElementById('cart-price').textContent = '$' + product[i].price;
+                    }
+                }
+            });
+        });
+
+        // 數量鈕
+        var minus = document.getElementById('qty-minus');
+        var plus = document.getElementById('qty-plus');
+        var last = document.getElementById('cart-last');
+        var qty = document.getElementById('qty-need');
+        var price = document.getElementById('cart-price');
+        var priceNum = Number(price.textContent.substring(1));
+        var lastNum, qtyNum, total;
+        minus.onclick = function () {
+        lastNum = Number(last.textContent.substring(2, 3));
+        qtyNum = Number(qty.textContent);
+            if (qtyNum > 1) {
+                qtyNum -= 1;
+                qty.textContent = qtyNum;
+                total = priceNum * qtyNum;
+                price.textContent = "$" + total;
+            }
+        };
+        plus.onclick = function () {
+        lastNum = Number(last.textContent.substring(2, 3));
+        qtyNum = Number(qty.textContent);
+            if (qtyNum < lastNum) {
+                qtyNum += 1;
+                qty.textContent = qtyNum;
+                total = priceNum * qtyNum;
+                price.textContent = "$" + total;
+            }
+        };
+
+        // 預訂鈕
+        var r = document.getElementById('cart-reservation');
+        r.onclick = function () {
+            window.location.href = 'check_page.html';
+        };
+    </script>
+</body>
+
+</html>
